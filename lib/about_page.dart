@@ -11,9 +11,9 @@ class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      backgroundColor: Color(0xffB0D9B1),
+      backgroundColor: Color(0xffF8DA5B),
       appBar: AppBar(
-        backgroundColor: Color(0xff618264),
+        backgroundColor: Color(0xff247291),
         title: Text("Profile"),
       ),
       body: SafeArea(

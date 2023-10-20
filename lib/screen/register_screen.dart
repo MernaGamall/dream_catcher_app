@@ -15,7 +15,50 @@ class _RegisterScreenState extends State<RegisterScreen> {
   late String email;
   late String password;
    bool isObscure = true;
-
+  // File? image;
+  // final imagePicker = ImagePicker();
+  // String? imageUrl;
+  //
+  // void takePhoto() async {
+  //   var camPhoto = await imagePicker.pickImage(source: ImageSource.camera);
+  //
+  //   image = File(camPhoto!.path);
+  //
+  //   emit(ChoosePhoto(image: image));
+  //
+  //   var nameImage = basename(camPhoto.path);
+  //
+  //   var refStorage = FirebaseStorage.instance.ref("$nameImage");
+  //
+  //   var myfer = refStorage.putFile(image!);
+  //
+  //   await myfer.whenComplete(() async {
+  //     var url = await refStorage.getDownloadURL();
+  //     imageUrl = url;
+  //   });
+  //
+  //   emit(ImageURLDone(URL: imageUrl));
+  // }
+  //
+  // void choosePhoto() async {
+  //   var galleryPhoto = await imagePicker.pickImage(source: ImageSource.gallery);
+  //
+  //   image = File(galleryPhoto!.path);
+  //
+  //   emit(ChoosePhoto(image: image));
+  //
+  //   var nameImage = basename(galleryPhoto.path);
+  //
+  //   var refStorage = FirebaseStorage.instance.ref("$nameImage");
+  //
+  //   var myfer = refStorage.putFile(image!);
+  //
+  //   await myfer.whenComplete(() async {
+  //     var url = await refStorage.getDownloadURL();
+  //     imageUrl = url;
+  //   });
+  //   emit(ImageURLDone(URL: imageUrl));
+  // }
   // bool internet = true;
   // @override
   // void initState() {
@@ -41,6 +84,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
     //   return NoInternetScreen();
     // }
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor:Color(0xff6F4E37),
+        title: Text(
+          "AppName".tr(),
+          // style: GoogleFonts.alexandria(
+          //   color: Colors.blue[800],
+          //   fontSize: 40,
+          // ),
+        ),
+      ),
       body: SafeArea(
           child: Center(
             child: Padding(
@@ -50,19 +103,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SizedBox(
-                      height: 25,
-                    ),
-                    Text(
-                      "AppName".tr(),
-                      // style: GoogleFonts.alexandria(
-                      //   color: Colors.blue[800],
-                      //   fontSize: 40,
-                      // ),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
+
 
                     // first name
                     Container(
@@ -206,16 +247,43 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       ),
                     ),
 
-
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        ElevatedButton(
+                          onPressed: () {
+                           // context.read<TakePhotoByCameraCubit>().takePhoto();
+                          },
+                          child: Icon(
+                            Icons.camera_enhance,
+                          ),
+                        ),
+                        ElevatedButton(
+                          onPressed: () {
+                            // context
+                            //     .read<TakePhotoByCameraCubit>()
+                            //     .choosePhoto();
+                          },
+                          child: Icon(
+                            Icons.filter,
+                          ),
+                        ),
+                      ],
+                    ),
                     // Expanded(
                     //   child: SizedBox(),
                     // ),
+
+                    CircleAvatar(
+                      radius: 100,
+                      backgroundColor: Colors.lightBlue,
+                    ),
                     Container(
                       width: 300,
                       child: ElevatedButton(
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(
-                           Colors.cyan ,
+                            Color(0xffAAAFBA) ,
                           ),
                         ),
                         onPressed: () async {

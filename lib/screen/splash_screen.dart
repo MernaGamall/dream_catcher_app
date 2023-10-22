@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+   SplashScreen({super.key});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -17,6 +17,8 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           children: [
             Text(" Dream Catcher "),
+            SizedBox(height: 30,),
+            Text(" أمسك حلمك"),
           ],
         ),
       )),

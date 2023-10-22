@@ -2,6 +2,8 @@ import 'package:dream_catcher_app/screen/register_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
+import 'screen/splash_screen.dart';
+
 void main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.fallbackLocale,
-        home: RegisterScreen()
+        home: SplashScreen()
     );
   }
 }

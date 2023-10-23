@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatefulWidget {
-  SplashScreen({super.key});
+class loginScreen extends StatefulWidget {
+  loginScreen({super.key});
 
   @override
-  State<SplashScreen> createState() => _SplashScreenState();
+  State<loginScreen> createState() => _loginScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _loginScreenState extends State<loginScreen> {
   GlobalKey<FormState> formKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
@@ -62,29 +62,30 @@ class _SplashScreenState extends State<SplashScreen> {
                               ),
                             ),
                           ),
-                          isObscure
-                              ? IconButton(
+                          // isObscure
+                          //     ?
+                          IconButton(
                             onPressed: () {
                               setState(() {
-                                isObscure = false;
+                               // isObscure = false;
                               });
                             },
                             icon: Icon(
                               Icons.visibility_off_outlined,
                               color: Colors.blue,
                             ),
-                          )
-                              : IconButton(
-                            onPressed: () {
-                              setState(() {
-                                isObscure = true;
-                              });
-                            },
-                            icon: Icon(
-                              Icons.remove_red_eye,
-                              color: Colors.blue,
-                            ),
                           ),
+                          //     : IconButton(
+                          //   onPressed: () {
+                          //     setState(() {
+                          //       isObscure = true;
+                          //     });
+                          //   },
+                          //   icon: Icon(
+                          //     Icons.remove_red_eye,
+                          //     color: Colors.blue,
+                          //   ),
+                          // ),
                         ],
                       ),
                     ),

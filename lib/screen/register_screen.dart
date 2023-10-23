@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:image_picker/image_picker.dart';
 
 
 class RegisterScreen extends StatefulWidget {
@@ -15,50 +18,54 @@ class _RegisterScreenState extends State<RegisterScreen> {
   late String email;
   late String password;
    bool isObscure = true;
-  // File? image;
-  // final imagePicker = ImagePicker();
-  // String? imageUrl;
-  //
-  // void takePhoto() async {
-  //   var camPhoto = await imagePicker.pickImage(source: ImageSource.camera);
-  //
-  //   image = File(camPhoto!.path);
-  //
-  //   emit(ChoosePhoto(image: image));
-  //
-  //   var nameImage = basename(camPhoto.path);
-  //
-  //   var refStorage = FirebaseStorage.instance.ref("$nameImage");
-  //
-  //   var myfer = refStorage.putFile(image!);
-  //
-  //   await myfer.whenComplete(() async {
-  //     var url = await refStorage.getDownloadURL();
-  //     imageUrl = url;
-  //   });
-  //
-  //   emit(ImageURLDone(URL: imageUrl));
-  // }
-  //
-  // void choosePhoto() async {
-  //   var galleryPhoto = await imagePicker.pickImage(source: ImageSource.gallery);
-  //
-  //   image = File(galleryPhoto!.path);
-  //
-  //   emit(ChoosePhoto(image: image));
-  //
-  //   var nameImage = basename(galleryPhoto.path);
-  //
-  //   var refStorage = FirebaseStorage.instance.ref("$nameImage");
-  //
-  //   var myfer = refStorage.putFile(image!);
-  //
-  //   await myfer.whenComplete(() async {
-  //     var url = await refStorage.getDownloadURL();
-  //     imageUrl = url;
-  //   });
-  //   emit(ImageURLDone(URL: imageUrl));
-  // }
+  File? image;
+  final imagePicker = ImagePicker();
+  String? imageUrl;
+
+  void takePhoto() async {
+    var camPhoto = await imagePicker.pickImage(source: ImageSource.camera);
+
+    setState(() {
+      image = File(camPhoto!.path);
+    });
+
+  //  emit(ChoosePhoto(image: image));
+
+    // var nameImage = basename(camPhoto.path);
+    //
+    // var refStorage = FirebaseStorage.instance.ref("$nameImage");
+    //
+    // var myfer = refStorage.putFile(image!);
+    //
+    // await myfer.whenComplete(() async {
+    //   var url = await refStorage.getDownloadURL();
+    //   imageUrl = url;
+    // });
+    //
+    // emit(ImageURLDone(URL: imageUrl));
+  }
+
+  void choosePhoto() async {
+    var galleryPhoto = await imagePicker.pickImage(source: ImageSource.gallery);
+
+    setState(() {
+      image = File(galleryPhoto!.path);
+    });
+
+    // emit(ChoosePhoto(image: image));
+    //
+    // var nameImage = basename(galleryPhoto.path);
+    //
+    // var refStorage = FirebaseStorage.instance.ref("$nameImage");
+    //
+    // var myfer = refStorage.putFile(image!);
+    //
+    // await myfer.whenComplete(() async {
+    //   var url = await refStorage.getDownloadURL();
+    //   imageUrl = url;
+    // });
+    // emit(ImageURLDone(URL: imageUrl));
+  }
   // bool internet = true;
   // @override
   // void initState() {
@@ -88,10 +95,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
         backgroundColor:Color(0xff6F4E37),
         title: Text(
           "AppName".tr(),
-          // style: GoogleFonts.alexandria(
-          //   color: Colors.blue[800],
-          //   fontSize: 40,
-          // ),
         ),
       ),
       body: SafeArea(
@@ -100,8 +103,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
               padding: const EdgeInsets.all(8.0),
               child: Form(
                 key: formKey,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                child: ListView(
+                 // mainAxisAlignment: MainAxisAlignment.center,
                   children: [
 
 
@@ -252,7 +255,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       children: [
                         ElevatedButton(
                           onPressed: () {
-                           // context.read<TakePhotoByCameraCubit>().takePhoto();
+                           takePhoto();
                           },
                           child: Icon(
                             Icons.camera_enhance,
@@ -260,9 +263,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ),
                         ElevatedButton(
                           onPressed: () {
-                            // context
-                            //     .read<TakePhotoByCameraCubit>()
-                            //     .choosePhoto();
+                            choosePhoto();
                           },
                           child: Icon(
                             Icons.filter,
@@ -274,7 +275,22 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     //   child: SizedBox(),
                     // ),
 
+                    image == null ?
+                        GestureDetector(
+                          onTap: (){
+                           showModalBottomSheet(context: context, builder: (builder){
+                             return Container();
+                           });
+                          },
+                          child: CircleAvatar(
+                            child: Text("تحميل صوره" ,style: TextStyle(color: Colors.black , fontSize: 40 ),),
+                      radius: 100,
+                      backgroundColor: Colors.lightBlue,
+
+                    ),
+                        ):
                     CircleAvatar(
+                      backgroundImage: FileImage(image!),
                       radius: 100,
                       backgroundColor: Colors.lightBlue,
                     ),

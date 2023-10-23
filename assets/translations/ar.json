@@ -6,7 +6,7 @@
   "FirstName" : "الاسم الاول",
   "LastName" : "الاسم الاخير" ,
   "PhoneNO" : "رقم الهاتف" ,
-  "Password" : "كلمة السر",
+  "Password" : "كلمة المرور",
   "NewAccount" : "إنشاء حساب جديد",
   "HaveAccount" : "لديك حساب بالفعل؟"
 

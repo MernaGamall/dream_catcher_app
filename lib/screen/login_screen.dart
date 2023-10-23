@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class loginScreen extends StatefulWidget {
@@ -30,7 +31,7 @@ class _loginScreenState extends State<loginScreen> {
                         keyboardType: TextInputType.number,
                         decoration: InputDecoration(
                           border: InputBorder.none,
-                          hintText: "Enter Your Phone Number ",
+                          hintText: "PhoneNO".tr(),
                         ),
                       ),
                     ),
@@ -58,7 +59,7 @@ class _loginScreenState extends State<loginScreen> {
                               keyboardType: TextInputType.visiblePassword,
                               decoration: InputDecoration(
                                 border: InputBorder.none,
-                                hintText: "كلمة المرور",
+                                hintText: "Password".tr(),
                               ),
                             ),
                           ),

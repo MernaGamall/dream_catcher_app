@@ -8,6 +8,9 @@
   "PhoneNO" : "رقم الهاتف" ,
   "Password" : "كلمة المرور",
   "NewAccount" : "إنشاء حساب جديد",
-  "HaveAccount" : "لديك حساب بالفعل؟"
+  "HaveAccount" : "لديك حساب بالفعل؟",
+  "photo" : "اضافة صوره",
+  "Camera" : "كاميرا",
+  "Gallery" : "المعرض"
 
 }

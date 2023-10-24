@@ -1,14 +1,16 @@
 {
 
  "Lang" : "عربي" ,
-
  "AppName" : "Dream Cacher",
  "FirstName" : "First Name",
  "LastName" : "Last Name",
  "PhoneNO" : "Phone Number",
  "Password" : "Password",
  "NewAccount" : "New Account",
- "HaveAccount" : "Already have an account?"
+ "HaveAccount" : "Already have an account?" ,
+ "photo" : "add photo",
+ "Camera" : "Camera",
+ "Gallery" : "Gallery"
 
 }
 

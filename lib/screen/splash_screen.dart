@@ -21,7 +21,8 @@ class _SplashScreenState extends State<SplashScreen> {
             Text(" أمسك حلمك"),
           ],
         ),
-      )),
+      ),
+      ),
     );
   }
 }

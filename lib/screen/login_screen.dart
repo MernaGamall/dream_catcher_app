@@ -1,14 +1,15 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-class loginScreen extends StatefulWidget {
-  loginScreen({super.key});
+class LoginScreen extends StatefulWidget {
+  LoginScreen({super.key});
 
   @override
-  State<loginScreen> createState() => _loginScreenState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _loginScreenState extends State<loginScreen> {
+class _LoginScreenState extends State<LoginScreen> {
+  bool isObscure = true;
   GlobalKey<FormState> formKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
@@ -56,6 +57,7 @@ class _loginScreenState extends State<loginScreen> {
                                 }
                                 return null;
                               },
+                              obscureText: isObscure,
                               keyboardType: TextInputType.visiblePassword,
                               decoration: InputDecoration(
                                 border: InputBorder.none,
@@ -63,30 +65,30 @@ class _loginScreenState extends State<loginScreen> {
                               ),
                             ),
                           ),
-                          // isObscure
-                          //     ?
+                           isObscure
+                               ?
                           IconButton(
                             onPressed: () {
                               setState(() {
-                               // isObscure = false;
+                                isObscure = false;
                               });
                             },
                             icon: Icon(
                               Icons.visibility_off_outlined,
                               color: Colors.blue,
                             ),
+                          )
+                              : IconButton(
+                            onPressed: () {
+                              setState(() {
+                                isObscure = true;
+                              });
+                            },
+                            icon: Icon(
+                              Icons.remove_red_eye,
+                              color: Colors.blue,
+                            ),
                           ),
-                          //     : IconButton(
-                          //   onPressed: () {
-                          //     setState(() {
-                          //       isObscure = true;
-                          //     });
-                          //   },
-                          //   icon: Icon(
-                          //     Icons.remove_red_eye,
-                          //     color: Colors.blue,
-                          //   ),
-                          // ),
                         ],
                       ),
                     ),

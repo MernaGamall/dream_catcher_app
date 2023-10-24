@@ -1,7 +1,7 @@
 {
 
  "Lang" : "عربي" ,
- "AppName" : "Dream Cacher",
+ "AppName" : "Dream Catcher",
  "FirstName" : "First Name",
  "LastName" : "Last Name",
  "PhoneNO" : "Phone Number",
@@ -10,7 +10,13 @@
  "HaveAccount" : "Already have an account?" ,
  "photo" : "add photo",
  "Camera" : "Camera",
- "Gallery" : "Gallery"
+ "Gallery" : "Gallery" ,
+ "language" : "language",
+ "Arabic" : "Arabic",
+ "prep1" : "Prep 1" ,
+ "prep2" : "Prep 2" ,
+ "prep3" : "Prep 3" ,
+ "stage" : "Your Stage"
 
 }
 

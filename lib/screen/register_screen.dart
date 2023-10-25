@@ -374,20 +374,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   });
                             },
                             child: CircleAvatar(
-                              minRadius: 5,
-                              backgroundImage: AssetImage("assets/images/ss.jpg" , ) ,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  Text(
-                                    "photo".tr(),
-                                    style:
-                                        TextStyle(color: Colors.black, fontSize: 20),
-                                  ),
-                                ],
-                              ),
-                             // radius: 70,
-                              backgroundColor: Colors.lightBlue,
+                            //  minRadius: 5,
+                             // backgroundImage: AssetImage("assets/images/ss.jpg" , ) ,
+                              child: Icon(Icons.add_reaction , size: 50, color: Colors.white,),
+                              // Column(
+                              //   mainAxisAlignment: MainAxisAlignment.end,
+                              //   children: [
+                              //     Text(
+                              //       "photo".tr(),
+                              //       style:
+                              //           TextStyle(color: Colors.black, fontSize: 20),
+                              //     ),
+                              //   ],
+                              // ),
+                             radius: 70,
+                              backgroundColor:  Color(0xffAAAFBA),
                             ),
                           )
                         : GestureDetector(

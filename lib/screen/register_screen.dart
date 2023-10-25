@@ -374,19 +374,19 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   });
                             },
                             child: CircleAvatar(
+                              minRadius: 5,
                               backgroundImage: AssetImage("assets/images/ss.jpg" , ) ,
                               child: Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
-                                  SizedBox(height: 20,),
-                                 // Image.asset("assets/images/ss.jpg"),
                                   Text(
                                     "photo".tr(),
                                     style:
-                                        TextStyle(color: Colors.black, fontSize: 40),
+                                        TextStyle(color: Colors.black, fontSize: 20),
                                   ),
                                 ],
                               ),
-                              radius: 100,
+                             // radius: 70,
                               backgroundColor: Colors.lightBlue,
                             ),
                           )

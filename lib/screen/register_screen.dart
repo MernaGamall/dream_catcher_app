@@ -105,11 +105,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
       body: Scrollbar(
         // scrollbarOrientation: ScrollbarOrientation.right,
         interactive: true,
-        //  radius: Radius.circular(50),
-        //  radius: Radius.elliptical(10, 100),
-        radius: Radius.zero,
+        radius: Radius.circular(50),
+          //radius: Radius.elliptical(10, 100),
+       // radius: Radius.zero,
         thumbVisibility : true,
-        trackVisibility: true,
+        //trackVisibility: true,
         thickness: 10,
         child: SafeArea(
           child: Center(
@@ -196,7 +196,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               }
                               return null;
                             },
-                            keyboardType: TextInputType.emailAddress,
+                            keyboardType: TextInputType.number,
                             onChanged: (value) {
                               email = value;
                             },
@@ -374,10 +374,17 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   });
                             },
                             child: CircleAvatar(
-                              child: Text(
-                                "photo".tr(),
-                                style:
-                                    TextStyle(color: Colors.black, fontSize: 40),
+                              backgroundImage: AssetImage("assets/images/ss.jpg" , ) ,
+                              child: Column(
+                                children: [
+                                  SizedBox(height: 20,),
+                                 // Image.asset("assets/images/ss.jpg"),
+                                  Text(
+                                    "photo".tr(),
+                                    style:
+                                        TextStyle(color: Colors.black, fontSize: 40),
+                                  ),
+                                ],
                               ),
                               radius: 100,
                               backgroundColor: Colors.lightBlue,

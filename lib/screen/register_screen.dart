@@ -97,7 +97,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     // }
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff6F4E37),
+        backgroundColor: Color(0xff247291),
         title: Text(
           "AppName".tr(),
         ),
@@ -376,7 +376,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             child: CircleAvatar(
                             //  minRadius: 5,
                              // backgroundImage: AssetImage("assets/images/ss.jpg" , ) ,
-                              child: Icon(Icons.add_reaction , size: 50, color: Colors.white,),
+                              child: Icon(Icons.face_retouching_natural_rounded, size: 50, color: Colors.white,),
                               // Column(
                               //   mainAxisAlignment: MainAxisAlignment.end,
                               //   children: [

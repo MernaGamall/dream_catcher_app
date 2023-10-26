@@ -62,6 +62,7 @@ class _SettingScreenState extends State<SettingScreen> {
                         Text("Dark".tr()),
                       ],
                     )),
+
               ),
             ],
 

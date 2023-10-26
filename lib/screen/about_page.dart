@@ -1,3 +1,4 @@
+import 'package:dream_catcher_app/control/url_functions.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -9,13 +10,15 @@ class AboutPage extends StatefulWidget {
 }
 
 class _AboutPageState extends State<AboutPage> {
+
+  String? studentStage;
+  String? studentLang = "Arabic".tr();
+
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      backgroundColor: Color(0xffF8DA5B),
       appBar: AppBar(
         title: Text("about".tr()),
-        backgroundColor: Color(0xff247291),
       ),
       body: SafeArea(
         child: Center(
@@ -30,11 +33,13 @@ class _AboutPageState extends State<AboutPage> {
                   children: [],
                 ),
                 Text(
-                  "شركة الروضه للادوات الكهربائيه و جميع أنواع الكبلات و المفاتيح الاوتوماتيك و اللوحات و خراطيم البلاستيك  تواصل معتا عبر الأتي : ",
+                    "information".tr()
                   // style: GoogleFonts.alexandria(
                   //   fontSize: 18,
                   // ),
                 ),
+
+                // face book
                 Container(
                   height: 50,
                   width: 350,
@@ -46,7 +51,25 @@ class _AboutPageState extends State<AboutPage> {
                       children: [
                         Icon(Icons.facebook_rounded),
                         SizedBox(width: 7),
-                        Text("شركة الروضه للأدوات الكهربيه"),
+                        Text("AppName".tr()),
+                      ],
+                    ),
+                  ),
+                ),
+
+                // youtube
+                Container(
+                  height: 50,
+                  width: 350,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      AboutFunction().youtubeUrl();
+                    },
+                    child: Row(
+                      children: [
+                        Icon(Icons.play_arrow_sharp),
+                        SizedBox(width: 7),
+                        Text("AppName".tr()),
                       ],
                     ),
                   ),
@@ -56,96 +79,78 @@ class _AboutPageState extends State<AboutPage> {
                   width: 350,
                   child: ElevatedButton(
                     onPressed: () {
+                      if(studentStage == "prep1".tr()){
+
+                      }else if (studentStage == "prep2".tr()){
+
+                      }else if (studentStage == "prep3".tr()){
+
+                      }
                       //AboutFunction().locationFunction();
                     },
                     child: Row(
                       children: [
                         Icon(
-                          Icons.location_on_outlined,
+                          Icons.telegram,
                         ),
                         SizedBox(width: 7),
-                        Text("شارع مصر اسيوط البطيء - البدرشين - الجيزه"),
+                        Text("دراسات"),
                       ],
                     ),
                   ),
                 ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: ElevatedButton(
-                        onPressed: () {
-                        //  AboutFunction().whatsUrl("01002095050");
-                        },
-                        child: Row(
-                          children: [
-                            Container(
-                              height: 25,
-                              width: 25,
-                             // child: Image.asset("image/whats.PNG"),
-                            ),
-                            SizedBox(width: 7),
-                            Text("01002095050"),
-                          ],
+
+                studentLang == "Arabic".tr() ?
+
+                Container(
+                  height: 50,
+                  width: 350,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      if(studentStage == "prep1".tr()){
+
+                      }else if (studentStage == "prep2".tr()){
+
+                      }else if (studentStage == "prep3".tr()){
+
+                      }
+                      //AboutFunction().locationFunction();
+                    },
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.telegram,
                         ),
-                      ),
+                        SizedBox(width: 7),
+                        Text("علوم"),
+                      ],
                     ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Expanded(
-                      child: ElevatedButton(
-                        onPressed: () {
-                        //  AboutFunction().whatsUrl("01157891602");
-                        },
-                        child: Row(
-                          children: [
-                            Container(
-                              height: 25,
-                              width: 25,
-                             // child: Image.asset("image/whats.PNG"),
-                            ),
-                            SizedBox(width: 7),
-                            Text("01157891602"),
-                          ],
+                  ),
+                ) :
+                Container(
+                  height: 50,
+                  width: 350,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      if(studentStage == "prep1".tr()){
+
+                      }else if (studentStage == "prep2".tr()){
+
+                      }else if (studentStage == "prep3".tr()){
+
+                      }
+                      //AboutFunction().locationFunction();
+                    },
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.telegram,
                         ),
-                      ),
+                        SizedBox(width: 7),
+                        Text("Science"),
+                      ],
                     ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: ElevatedButton(
-                        onPressed: () {
-                         // AboutFunction().PhoneUrl("01110955595");
-                        },
-                        child: Row(
-                          children: [
-                            Icon(Icons.phone),
-                            SizedBox(width: 7),
-                            Text("01110955595"),
-                          ],
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    Expanded(
-                      child: ElevatedButton(
-                        onPressed: () {
-                        //  AboutFunction().PhoneUrl("01142323655");
-                        },
-                        child: Row(
-                          children: [
-                            Icon(Icons.phone),
-                            SizedBox(width: 7),
-                            Text("01142323655"),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ],
             ),
@@ -153,24 +158,6 @@ class _AboutPageState extends State<AboutPage> {
         ),
       ),
     );
-    //   Scaffold(
-    //   backgroundColor: Color(0xffF8DA5B),
-    //   appBar: AppBar(
-    //     backgroundColor: Color(0xff247291),
-    //     title: Text("Profile"),
-    //   ),
-    //   body: SafeArea(
-    //     child: Center(
-    //       child: Column(
-    //         children: [
-    //           // logo
-    //
-    //
-    //         ],
-    //       ),
-    //     ),
-    //   ),
-    // );
   }
 }
 //introduce

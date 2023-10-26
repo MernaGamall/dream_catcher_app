@@ -16,8 +16,8 @@ void main() async {
     EasyLocalization(
         supportedLocales: [Locale('en'), Locale('ar')],
         path: 'assets/translations',
-       fallbackLocale: Locale('ar'),
-        startLocale: Locale('ar'),
+       fallbackLocale: Locale('en'),
+        startLocale: Locale('en'),
         child: MyApp(),),
   );
 
@@ -27,6 +27,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        scaffoldBackgroundColor: Color(0xffF8DA5B),
+        appBarTheme: AppBarTheme(
+          color: Color(0xff247291),
+        )
+      ),
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.fallbackLocale,

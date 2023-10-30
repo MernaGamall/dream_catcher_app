@@ -22,8 +22,16 @@ void main() async {
   );
 
 }
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  ThemeMode _themeMode = ThemeMode.system;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -33,10 +41,17 @@ class MyApp extends StatelessWidget {
           color: Color(0xff247291),
         )
       ),
+        themeMode: _themeMode,
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.fallbackLocale,
         home: AboutPage()
     );
+  }
+
+  void changeTheme(ThemeMode themeMode) {
+    setState(() {
+      _themeMode = themeMode;
+    });
   }
 }

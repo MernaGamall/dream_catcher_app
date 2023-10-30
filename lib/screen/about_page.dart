@@ -93,7 +93,7 @@ class _AboutPageState extends State<AboutPage> {
                           Icons.telegram,
                         ),
                         SizedBox(width: 7),
-                        Text("جروب التليجرام"),
+                        Text("telegram".tr()),
                       ],
                     ),
                   ),

@@ -36,7 +36,12 @@ class _SettingScreenState extends State<SettingScreen> {
                         ),
                     clipBehavior: Clip.hardEdge,
                     onPressed: () {
-                      //   Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ChangeColor()));
+                        // Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ChangeColor()));
+                      if (context.locale == Locale('ar')) {
+                        context.setLocale(Locale('en'));
+                      } else {
+                        context.setLocale(Locale('ar'));
+                      }
                     },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -59,22 +64,59 @@ class _SettingScreenState extends State<SettingScreen> {
                         MyApp.of(context).changeTheme(ThemeMode.light),
                     child: Icon(Icons.add_a_photo_outlined),
                   )),
+
+
               Container(
                 width: MediaQuery.of(context).size.width,
                 child: ElevatedButton(
-                    onPressed: () =>
-                        MyApp.of(context).changeTheme(ThemeMode.dark),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.dark_mode_outlined),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Text("Dark".tr()),
-                      ],
-                    )),
+                  onPressed: () =>
+                      MyApp.of(context).changeTheme(ThemeMode.light),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.light_mode),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text("Light".tr()),
+                    ],
+                  ),
+                ),
               ),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                child: ElevatedButton(
+                  onPressed: () =>
+                      MyApp.of(context).changeTheme(ThemeMode.dark),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.dark_mode_outlined),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text("dark".tr()),
+                    ],
+                  ),
+                ),
+              ),
+
+              // Container(
+              //   width: MediaQuery.of(context).size.width,
+              //   child: ElevatedButton(
+              //       onPressed: () =>
+              //           MyApp.of(context).changeTheme(ThemeMode.dark),
+              //       child: Row(
+              //         mainAxisAlignment: MainAxisAlignment.center,
+              //         children: [
+              //           Icon(Icons.dark_mode_outlined),
+              //           SizedBox(
+              //             width: 5,
+              //           ),
+              //           Text("dark".tr()),
+              //         ],
+              //       )),
+              // ),
             ],
           ),
         ),

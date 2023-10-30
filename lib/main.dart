@@ -16,7 +16,7 @@ void main() async {
     EasyLocalization(
         supportedLocales: [Locale('en'), Locale('ar')],
         path: 'assets/translations',
-       fallbackLocale: Locale('en'),
+      // fallbackLocale: Locale('en'),
         startLocale: Locale('en'),
         child: MyApp(),),
   );
@@ -47,7 +47,7 @@ class _MyAppState extends State<MyApp> {
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
-        home: AboutPage()
+        home: SettingScreen()
     );
   }
 

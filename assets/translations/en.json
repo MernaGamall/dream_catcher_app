@@ -20,7 +20,10 @@
  "stage" : "Your Stage" ,
  "setting" : "Setting",
  "about" : "About Us",
- "information" : "some information about app"
+ "information" : "some information about app",
+ "telegram" : "Telegram Group" ,
+ "dark" :  "Dark" ,
+ "Light" :  "Light"
 
 }
 

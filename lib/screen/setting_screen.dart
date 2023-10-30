@@ -56,14 +56,14 @@ class _SettingScreenState extends State<SettingScreen> {
                   width: MediaQuery.of(context).size.width,
                   child: ElevatedButton(
                     onPressed: () =>
-                        FirstScreen.of(context).changeTheme(ThemeMode.light),
+                        MyApp.of(context).changeTheme(ThemeMode.light),
                     child: Icon(Icons.add_a_photo_outlined),
                   )),
               Container(
                 width: MediaQuery.of(context).size.width,
                 child: ElevatedButton(
                     onPressed: () =>
-                        FirstScreen.of(context).changeTheme(ThemeMode.dark),
+                        MyApp.of(context).changeTheme(ThemeMode.dark),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

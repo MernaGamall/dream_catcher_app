@@ -3,7 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 class AboutFunction {
   //facebook function
   facebookURL() async {
-    final Uri url = await Uri.parse('https://www.facebook.com/Rawdakabel');
+    final Uri url = await Uri.parse('https://www.facebook.com/Science.Teachers.net?mibextid=ZbWKwL');
     if (!await launchUrl(url,
         mode: LaunchMode.externalApplication,
         webViewConfiguration: WebViewConfiguration(
@@ -18,6 +18,16 @@ class AboutFunction {
   youtubeUrl() async {
     final Uri url =
         Uri.parse('https://www.youtube.com/channel/UC9r93sIUkw1Bme8hQk5BYkA');
+    if (!await launchUrl(url)) {
+      var _url;
+      throw Exception('Could not launch $_url');
+    }
+  }
+
+  //whatsapp function
+  TelegramGroup(String Stage) async {
+    final Uri url =
+        Uri.parse(Stage);
     if (!await launchUrl(url)) {
       var _url;
       throw Exception('Could not launch $_url');

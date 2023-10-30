@@ -11,7 +11,7 @@ class AboutPage extends StatefulWidget {
 
 class _AboutPageState extends State<AboutPage> {
 
-  String? studentStage;
+  String? studentStage = "prep2".tr();
   String? studentLang = "Arabic".tr();
 
   @override
@@ -45,7 +45,7 @@ class _AboutPageState extends State<AboutPage> {
                   width: 350,
                   child: ElevatedButton(
                     onPressed: () {
-                    //  AboutFunction().facebookURL();
+                      AboutFunction().facebookURL();
                     },
                     child: Row(
                       children: [
@@ -80,13 +80,12 @@ class _AboutPageState extends State<AboutPage> {
                   child: ElevatedButton(
                     onPressed: () {
                       if(studentStage == "prep1".tr()){
-
+                        AboutFunction().TelegramGroup("https://t.me/+Z0HjV9wVnsQ5MzQ0");
                       }else if (studentStage == "prep2".tr()){
-
+                        AboutFunction().TelegramGroup("https://t.me/+EkFEmo79PN04OWZk");
                       }else if (studentStage == "prep3".tr()){
-
+                        AboutFunction().TelegramGroup("https://t.me/+bvqgx4Y3EXwxZDM0");
                       }
-                      //AboutFunction().locationFunction();
                     },
                     child: Row(
                       children: [
@@ -100,58 +99,58 @@ class _AboutPageState extends State<AboutPage> {
                   ),
                 ),
 
-                studentLang == "Arabic".tr() ?
-
-                Container(
-                  height: 50,
-                  width: 350,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      if(studentStage == "prep1".tr()){
-
-                      }else if (studentStage == "prep2".tr()){
-
-                      }else if (studentStage == "prep3".tr()){
-
-                      }
-                      //AboutFunction().locationFunction();
-                    },
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.telegram,
-                        ),
-                        SizedBox(width: 7),
-                        Text("علوم"),
-                      ],
-                    ),
-                  ),
-                ) :
-                Container(
-                  height: 50,
-                  width: 350,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      if(studentStage == "prep1".tr()){
-
-                      }else if (studentStage == "prep2".tr()){
-
-                      }else if (studentStage == "prep3".tr()){
-
-                      }
-                      //AboutFunction().locationFunction();
-                    },
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.telegram,
-                        ),
-                        SizedBox(width: 7),
-                        Text("Science"),
-                      ],
-                    ),
-                  ),
-                ),
+                // studentLang == "Arabic".tr() ?
+                //
+                // Container(
+                //   height: 50,
+                //   width: 350,
+                //   child: ElevatedButton(
+                //     onPressed: () {
+                //       if(studentStage == "prep1".tr()){
+                //
+                //       }else if (studentStage == "prep2".tr()){
+                //
+                //       }else if (studentStage == "prep3".tr()){
+                //
+                //       }
+                //       //AboutFunction().locationFunction();
+                //     },
+                //     child: Row(
+                //       children: [
+                //         Icon(
+                //           Icons.telegram,
+                //         ),
+                //         SizedBox(width: 7),
+                //         Text("علوم"),
+                //       ],
+                //     ),
+                //   ),
+                // ) :
+                // Container(
+                //   height: 50,
+                //   width: 350,
+                //   child: ElevatedButton(
+                //     onPressed: () {
+                //       if(studentStage == "prep1".tr()){
+                //
+                //       }else if (studentStage == "prep2".tr()){
+                //
+                //       }else if (studentStage == "prep3".tr()){
+                //
+                //       }
+                //       //AboutFunction().locationFunction();
+                //     },
+                //     child: Row(
+                //       children: [
+                //         Icon(
+                //           Icons.telegram,
+                //         ),
+                //         SizedBox(width: 7),
+                //         Text("Science"),
+                //       ],
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           ),

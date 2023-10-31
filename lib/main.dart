@@ -41,8 +41,24 @@ class _MyAppState extends State<MyApp> {
         scaffoldBackgroundColor: Color(0xffF8DA5B),
         appBarTheme: AppBarTheme(
           color: Color(0xff247291),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all(Color(0xff247291),),
+          )
         )
       ),
+        darkTheme:  ThemeData(
+            scaffoldBackgroundColor: Colors.black38,
+            appBarTheme: AppBarTheme(
+              color: Color(0xff787A91),
+            ),
+            elevatedButtonTheme: ElevatedButtonThemeData(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Color(0xff787A91),),
+                )
+            )
+        ),
         themeMode: _themeMode,
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,

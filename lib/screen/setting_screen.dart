@@ -27,6 +27,7 @@ class _SettingScreenState extends State<SettingScreen> {
       body: SafeArea(
         child: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
                 width: MediaQuery.of(context).size.width,

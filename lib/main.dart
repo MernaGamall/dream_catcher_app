@@ -1,4 +1,6 @@
 import 'package:dream_catcher_app/screen/about_page.dart';
+import 'package:dream_catcher_app/screen/try_desighn/circle_button.dart';
+import 'package:dream_catcher_app/screen/try_desighn/home_page.dart';
 import 'package:dream_catcher_app/screen/login_screen.dart';
 import 'package:dream_catcher_app/screen/register_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -63,7 +65,7 @@ class _MyAppState extends State<MyApp> {
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
-        home: SettingScreen()
+        home: MyHomePage()
     );
   }
 

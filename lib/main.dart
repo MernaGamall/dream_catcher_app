@@ -1,8 +1,8 @@
 import 'package:dream_catcher_app/screen/drawer_screnns/about_page.dart';
 import 'package:dream_catcher_app/screen/try_desighn/circle_button.dart';
 import 'package:dream_catcher_app/screen/try_desighn/home_page.dart';
-import 'package:dream_catcher_app/screen/login_screen.dart';
-import 'package:dream_catcher_app/screen/register_screen.dart';
+import 'package:dream_catcher_app/screen/authentication_screens/login_screen.dart';
+import 'package:dream_catcher_app/screen/authentication_screens/register_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 

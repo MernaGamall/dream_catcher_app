@@ -25,6 +25,7 @@ class HomePage extends StatelessWidget {
         child: SizedBox(
           width: double.infinity,
           height: 60,
+
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

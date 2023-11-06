@@ -13,13 +13,16 @@ class NavigationPage extends StatefulWidget {
 
 class _NavigationPageState extends State<NavigationPage> {
    int index = 0;
+   String AppBarTitle = "title of index 0";
 
 List Badges = [SettingScreen() , AboutPage() , RegisterScreen() , LoginScreen()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(AppBarTitle),
+      ),
       endDrawer: Drawer(
         shadowColor: Colors.deepOrangeAccent,
         child: ListView(
@@ -144,6 +147,7 @@ List Badges = [SettingScreen() , AboutPage() , RegisterScreen() , LoginScreen()]
               onPressed: () {
                 setState(() {
                   index = 0;
+                  AppBarTitle = "title of index 0";
                 });
               },
             ),
@@ -157,6 +161,7 @@ List Badges = [SettingScreen() , AboutPage() , RegisterScreen() , LoginScreen()]
               onPressed: () {
                 setState(() {
                   index = 1;
+                  AppBarTitle = "title of index 1";
                 });
               },
             ),
@@ -170,6 +175,7 @@ List Badges = [SettingScreen() , AboutPage() , RegisterScreen() , LoginScreen()]
               onPressed: () {
                 setState(() {
                   index = 2;
+                  AppBarTitle = "title of index 2";
                 });
               },
             ),
@@ -182,6 +188,7 @@ List Badges = [SettingScreen() , AboutPage() , RegisterScreen() , LoginScreen()]
               onPressed: () {
                 setState(() {
                   index = 3;
+                  AppBarTitle = "title of index 3";
                 });
               },
             ),

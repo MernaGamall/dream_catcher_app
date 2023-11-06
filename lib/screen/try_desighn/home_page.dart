@@ -1,14 +1,26 @@
+import 'package:dream_catcher_app/screen/authentication_screens/login_screen.dart';
+import 'package:dream_catcher_app/screen/authentication_screens/register_screen.dart';
+import 'package:dream_catcher_app/screen/drawer_screnns/about_page.dart';
+import 'package:dream_catcher_app/screen/drawer_screnns/setting_screen.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomePage extends StatefulWidget {
+   HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+   int index = 0;
+
+List Badges = [SettingScreen() , AboutPage() , RegisterScreen() , LoginScreen()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      bottomNavigationBar: BottomAppBar(
 
+      bottomNavigationBar: BottomAppBar(
 
         notchMargin: 7,
         color: Colors.white,
@@ -31,26 +43,45 @@ class HomePage extends StatelessWidget {
             SizedBox(width: 20,),
             IconButton(
               tooltip: 'Search',
-              icon: const Icon(Icons.event_note),
-              onPressed: () {},
+              icon:
+              index == 0 ?
+              Icon(Icons.event_note) :
+              Icon(Icons.note_sharp),
+              onPressed: () {
+                setState(() {
+                  index = 0;
+                });
+              },
             ),
             SizedBox(width: 20,),
             IconButton(
               tooltip: 'Favorite',
               icon: const Icon(Icons.note_alt_outlined),
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  index = 1;
+                });
+              },
             ),
           Expanded(child: SizedBox()),
             IconButton(
               tooltip: 'Favorite',
               icon: const Icon(Icons.home),
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  index = 2;
+                });
+              },
             ),
             SizedBox(width: 20,),
             IconButton(
               tooltip: 'Favorite',
               icon: const Icon(Icons.ondemand_video_outlined),
-              onPressed: () {},
+              onPressed: () {
+                setState(() {
+                  index = 3;
+                });
+              },
             ),
             SizedBox(width: 20,),
           ],
@@ -63,9 +94,12 @@ class HomePage extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(40)),
 
         ),
-        onPressed: (){},
+        onPressed: (){
+        },
         child: Icon(Icons.add),
       ),
+
+      body: Badges[index],
     );
   }
 }

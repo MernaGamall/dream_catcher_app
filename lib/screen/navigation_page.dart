@@ -4,14 +4,14 @@ import 'package:dream_catcher_app/screen/drawer_screnns/about_page.dart';
 import 'package:dream_catcher_app/screen/drawer_screnns/setting_screen.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-   HomePage({super.key});
+class NavigationPage extends StatefulWidget {
+   NavigationPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<NavigationPage> createState() => _NavigationPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _NavigationPageState extends State<NavigationPage> {
    int index = 0;
 
 List Badges = [SettingScreen() , AboutPage() , RegisterScreen() , LoginScreen()];

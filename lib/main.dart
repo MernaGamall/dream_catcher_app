@@ -1,6 +1,6 @@
 import 'package:dream_catcher_app/screen/drawer_screnns/about_page.dart';
 import 'package:dream_catcher_app/screen/try_desighn/circle_button.dart';
-import 'package:dream_catcher_app/screen/try_desighn/home_page.dart';
+import 'package:dream_catcher_app/screen/navigation_page.dart';
 import 'package:dream_catcher_app/screen/authentication_screens/login_screen.dart';
 import 'package:dream_catcher_app/screen/authentication_screens/register_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -64,7 +64,7 @@ class _MyAppState extends State<MyApp> {
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
-        home: HomePage()
+        home: NavigationPage()
     );
   }
 

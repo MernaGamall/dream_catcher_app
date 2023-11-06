@@ -56,7 +56,10 @@ List Badges = [SettingScreen() , AboutPage() , RegisterScreen() , LoginScreen()]
             SizedBox(width: 20,),
             IconButton(
               tooltip: 'Favorite',
-              icon: const Icon(Icons.note_alt_outlined),
+              icon:   index == 1 ?
+              Icon(Icons.note_alt_outlined) :
+              Icon(Icons.note_sharp),
+
               onPressed: () {
                 setState(() {
                   index = 1;
@@ -66,7 +69,10 @@ List Badges = [SettingScreen() , AboutPage() , RegisterScreen() , LoginScreen()]
           Expanded(child: SizedBox()),
             IconButton(
               tooltip: 'Favorite',
-              icon: const Icon(Icons.home),
+              icon:   index == 2 ?
+              Icon(Icons.home) :
+              Icon(Icons.note_sharp),
+
               onPressed: () {
                 setState(() {
                   index = 2;
@@ -76,7 +82,9 @@ List Badges = [SettingScreen() , AboutPage() , RegisterScreen() , LoginScreen()]
             SizedBox(width: 20,),
             IconButton(
               tooltip: 'Favorite',
-              icon: const Icon(Icons.ondemand_video_outlined),
+              icon:   index == 3 ?
+              Icon(Icons.ondemand_video_outlined) :
+              Icon(Icons.note_sharp),
               onPressed: () {
                 setState(() {
                   index = 3;

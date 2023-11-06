@@ -16,7 +16,7 @@ class _VideosScreenState extends State<VideosScreen> {
   void initState() {
     super.initState();
     _controller = VideoPlayerController.networkUrl(Uri.parse(
-        'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4'))
+        'https://youtu.be/PaAURhn5_MY?si=vM_-Bj_zI0XzwhAI'))
       ..initialize().then((_) {
         // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {});

@@ -5,7 +5,6 @@ import 'package:dream_catcher_app/screen/authentication_screens/login_screen.dar
 import 'package:dream_catcher_app/screen/authentication_screens/register_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-
 import 'screen/drawer_screnns/setting_screen.dart';
 import 'screen/splash_screen.dart';
 

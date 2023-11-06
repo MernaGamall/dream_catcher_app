@@ -8,6 +8,8 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       bottomNavigationBar: BottomAppBar(
+
+
         notchMargin: 7,
         color: Colors.white,
         clipBehavior: Clip.antiAlias,
@@ -15,18 +17,45 @@ class HomePage extends StatelessWidget {
           RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(50),
-              topRight:  Radius.circular(15),
+              topRight:  Radius.circular(50),
+              bottomLeft: Radius.circular(50),
+              bottomRight: Radius.circular(50),
             )
           ),
           RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(40))
           )
         ),
-        child: SizedBox(
-          width: double.infinity,
-          height: 60,
+        child: Row(
+          children: [
+            SizedBox(width: 20,),
+            IconButton(
+              tooltip: 'Search',
+              icon: const Icon(Icons.event_note),
+              onPressed: () {},
+            ),
+            SizedBox(width: 20,),
+            IconButton(
+              tooltip: 'Favorite',
+              icon: const Icon(Icons.note_alt_outlined),
+              onPressed: () {},
+            ),
+          Expanded(child: SizedBox()),
+            IconButton(
+              tooltip: 'Favorite',
+              icon: const Icon(Icons.home),
+              onPressed: () {},
+            ),
+            SizedBox(width: 20,),
+            IconButton(
+              tooltip: 'Favorite',
+              icon: const Icon(Icons.ondemand_video_outlined),
+              onPressed: () {},
+            ),
+            SizedBox(width: 20,),
+          ],
+        )
 
-        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(

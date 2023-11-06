@@ -1,3 +1,4 @@
+import 'package:dream_catcher_app/bottom_navigantionbar_screens/subjectQuestion_screen.dart';
 import 'package:dream_catcher_app/bottom_navigantionbar_screens/videos_screens.dart';
 import 'package:dream_catcher_app/screen/drawer_screnns/about_page.dart';
 import 'package:dream_catcher_app/screen/try_desighn/circle_button.dart';
@@ -65,7 +66,7 @@ class _MyAppState extends State<MyApp> {
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
-        home: NavigationPage()
+        home: SubjectScreen()
     );
   }
 

@@ -24,6 +24,7 @@
   "dark" :  "مظلم" ,
   "Light" :  "مضئ",
   "ChooseSubjectTitle" : "الفيديوهات",
-  "playList" : " قوائم التشغيل:  "
+  "playList" : " قوائم التشغيل:  " ,
+  "logOut" : "تسجيل الخروج"
 
 }

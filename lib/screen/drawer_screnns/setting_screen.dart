@@ -58,13 +58,13 @@ class _SettingScreenState extends State<SettingScreen> {
                       ],
                     )),
               ),
-              Container(
-                  width: MediaQuery.of(context).size.width,
-                  child: ElevatedButton(
-                    onPressed: () =>
-                        MyApp.of(context).changeTheme(ThemeMode.light),
-                    child: Icon(Icons.add_a_photo_outlined),
-                  )),
+              // Container(
+              //     width: MediaQuery.of(context).size.width,
+              //     child: ElevatedButton(
+              //       onPressed: () =>
+              //           MyApp.of(context).changeTheme(ThemeMode.light),
+              //       child: Icon(Icons.add_a_photo_outlined),
+              //     )),
 
 
               Container(

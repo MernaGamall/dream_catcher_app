@@ -1,5 +1,6 @@
 
 import 'package:dream_catcher_app/screen/navigation_page.dart';
+import 'package:dream_catcher_app/screen/profile_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -63,7 +64,7 @@ class _MyAppState extends State<MyApp> {
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
-        home: NavigationPage()
+        home: ProfileScreen()
     );
   }
 

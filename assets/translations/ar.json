@@ -1,13 +1,12 @@
 {
 
   "Lang" : "ENG" ,
-
-  "AppName" : "Dream Cacher",
+  "AppName" : "Dream Catcher",
   "FirstName" : "الاسم الاول",
   "LastName" : "الاسم الاخير" ,
   "PhoneNO" : "رقم الهاتف" ,
   "Password" : "كلمة المرور",
-  "NewAccount" : "إنشاء حساب جديد",
+  "NewAccount" : "إنشاء حساب ",
   "HaveAccount" : "لديك حساب بالفعل؟",
   "photo" : "اضافة صوره",
   "Camera" : "كاميرا",

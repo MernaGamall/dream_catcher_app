@@ -1,5 +1,7 @@
 import 'package:dream_catcher_app/screen/authentication_screens/login_screen.dart';
 import 'package:dream_catcher_app/screen/authentication_screens/register_screen.dart';
+import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/subjectQuestion_screen.dart';
+import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/videos_screens.dart';
 import 'package:dream_catcher_app/screen/drawer_screnns/about_page.dart';
 import 'package:dream_catcher_app/screen/drawer_screnns/setting_screen.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +17,7 @@ class _NavigationPageState extends State<NavigationPage> {
    int index = 0;
    String AppBarTitle = "title of index 0";
 
-List Badges = [SettingScreen() , AboutPage() , RegisterScreen() , LoginScreen()];
+List Pages = [SettingScreen() , AboutPage() , RegisterScreen() , SubjectScreen()];
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,6 @@ List Badges = [SettingScreen() , AboutPage() , RegisterScreen() , LoginScreen()]
         title: Text(AppBarTitle),
       ),
       endDrawer: Drawer(
-        shadowColor: Colors.deepOrangeAccent,
         child: ListView(
           children: [
             DrawerHeader(
@@ -219,7 +220,7 @@ List Badges = [SettingScreen() , AboutPage() , RegisterScreen() , LoginScreen()]
         child: Icon(Icons.add),
       ),
 
-      body: Badges[index],
+      body: Pages[index],
     );
   }
 }

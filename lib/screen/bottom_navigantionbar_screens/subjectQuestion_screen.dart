@@ -1,3 +1,4 @@
+import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/videos_screens.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -25,41 +26,68 @@ class _SubjectScreenState extends State<SubjectScreen> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.cyan
+                    child: GestureDetector(
+                      onTap: (){
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => VideosScreen(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.cyan
+                        ),
+                        child: Column(
+                          children: [
+                            Image.asset(""),
+                            Text("علوم"),],
+                        )
                       ),
-                      child: Column(
-                        children: [
-                          Image.asset(""),
-                          Text("علوم"),],
-                      )
                     ),
                   ),
                   studentLang == "Arabic".tr()?
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Container(
+                    child: GestureDetector(
+                      onTap: (){
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => VideosScreen(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.cyan
+                        ),
+                        child: Column(
+                          children: [
+                            Image.asset(""),
+                            Text("دراسات أجنماعيه"),],
+                        )
+                      ),
+                    ),
+                  ):
+                 GestureDetector(
+                   onTap: (){
+                     Navigator.of(context).push(
+                       MaterialPageRoute(
+                         builder: (context) => VideosScreen(),
+                       ),
+                     );
+                   },
+                   child: Container(
                       decoration: BoxDecoration(
                         color: Colors.cyan
                       ),
                       child: Column(
                         children: [
                           Image.asset(""),
-                          Text("دراسات أجنماعيه"),],
+                          Text("Science"),],
                       )
-                    ),
-                  ):
-                 Container(
-                    decoration: BoxDecoration(
-                      color: Colors.cyan
-                    ),
-                    child: Column(
-                      children: [
-                        Image.asset(""),
-                        Text("Science"),],
-                    )
              ),
+                 ),
                 ],
               )
             ],

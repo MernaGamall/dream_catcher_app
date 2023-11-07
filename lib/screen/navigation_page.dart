@@ -210,12 +210,7 @@ List Badges = [SettingScreen() , AboutPage() , RegisterScreen() , LoginScreen()]
               builder: (context) {
                 return AlertDialog(
                   content: Text("كلمه او نصيحه تظهر للطالب من مجموعه عشوائيه"),
-                  actions: [
-                    TextButton(
-                      onPressed: () => Navigator.of(context).pop(),
-                      child: const Text('CLOSE'),
-                    ),
-                  ],
+
                 );
               },
             );

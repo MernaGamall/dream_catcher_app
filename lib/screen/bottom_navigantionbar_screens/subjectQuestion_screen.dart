@@ -21,9 +21,12 @@ class _SubjectScreenState extends State<SubjectScreen> {
           child: Column(
             children: [
               SizedBox(height: 50,),
-              Text(":قوائم التشغيل  المتاحه",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+              Text("playList".tr(),style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+              SizedBox(height: 20,),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: GestureDetector(
@@ -35,13 +38,17 @@ class _SubjectScreenState extends State<SubjectScreen> {
                         );
                       },
                       child: Container(
+
                         decoration: BoxDecoration(
-                          color: Colors.cyan
+                          color: Color(0xffFFE8C7),
                         ),
                         child: Column(
                           children: [
-                            Image.asset(""),
-                            Text("علوم"),],
+                            Container(
+                                height: 150,
+                                width: 150,
+                                child: Image.asset("assets/images/img_1.jpg")),
+                            Text(" العلوم",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),],
                         )
                       ),
                     ),
@@ -59,12 +66,15 @@ class _SubjectScreenState extends State<SubjectScreen> {
                       },
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.cyan
+                          color: Color(0xffFFE8C7),
                         ),
                         child: Column(
                           children: [
-                            Image.asset(""),
-                            Text("دراسات أجنماعيه"),],
+                            Container(
+                                height: 150,
+                                width: 150,
+                                child: Image.asset("assets/images/img_2.png")),
+                            Text("الدراسات الأجتماعيه ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold)),],
                         )
                       ),
                     ),

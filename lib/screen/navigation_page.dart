@@ -4,6 +4,7 @@ import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/subjectQu
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/videos_screens.dart';
 import 'package:dream_catcher_app/screen/drawer_screnns/about_page.dart';
 import 'package:dream_catcher_app/screen/drawer_screnns/setting_screen.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class NavigationPage extends StatefulWidget {
@@ -189,7 +190,7 @@ List Pages = [SettingScreen() , AboutPage() , RegisterScreen() , SubjectScreen()
               onPressed: () {
                 setState(() {
                   index = 3;
-                  AppBarTitle = "title of index 3";
+                  AppBarTitle = "ChooseSubjectTitle".tr();
                 });
               },
             ),

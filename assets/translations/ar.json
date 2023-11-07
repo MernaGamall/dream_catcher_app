@@ -22,6 +22,8 @@
   "information" : "معلومات عن البرنامج",
   "telegram" : "جروب التليجرام" ,
   "dark" :  "مظلم" ,
-  "Light" :  "مضئ"
+  "Light" :  "مضئ",
+  "ChooseSubjectTitle" : "الفيديوهات",
+  "playList" : " قوائم التشغيل:  "
 
 }

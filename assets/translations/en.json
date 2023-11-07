@@ -23,7 +23,9 @@
  "information" : "some information about app",
  "telegram" : "Telegram Group" ,
  "dark" :  "Dark" ,
- "Light" :  "Light"
+ "Light" :  "Light",
+ "ChooseSubjectTitle" : "Videos",
+ "playList" : "Play Lists :"
 
 }
 

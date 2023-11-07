@@ -30,6 +30,9 @@ class _VideosScreenState extends State<VideosScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      appBar: AppBar(
+        title: Text("Videos"),
+      ),
       body: Center(
         child: _controller.value.isInitialized
             ? AspectRatio(

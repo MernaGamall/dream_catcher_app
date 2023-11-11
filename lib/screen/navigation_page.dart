@@ -2,7 +2,7 @@ import 'package:dream_catcher_app/screen/authentication_screens/login_screen.dar
 import 'package:dream_catcher_app/screen/authentication_screens/register_screen.dart';
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/subjectQuestion_screen.dart';
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/videos_screens.dart';
-import 'package:dream_catcher_app/screen/drawer_screnns/about_page.dart';
+import 'package:dream_catcher_app/screen/drawer_screnns/about_screen.dart';
 import 'package:dream_catcher_app/screen/drawer_screnns/setting_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';

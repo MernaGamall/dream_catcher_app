@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 
 import 'screen/bottom_navigantionbar_screens/subjectQuestion_screen.dart';
 import 'screen/bottom_navigantionbar_screens/videos_screens.dart';
-import 'screen/drawer_screnns/about_screen.dart';
 
 
 void main() async {
@@ -64,7 +63,7 @@ class _MyAppState extends State<MyApp> {
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
-        home: AboutPage()
+        home: NavigationPage()
     );
   }
 

@@ -55,12 +55,12 @@ List Pages = [SettingScreen() , AboutPage() , RegisterScreen() , SubjectScreen()
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.add),
+                  Icon(Icons.contact_phone_rounded),
                   SizedBox(
                     width: 5,
                   ),
                   Text(
-                    "About Us",
+                    "about".tr(),
                     style: TextStyle(color: Colors.black),
                   ),
                 ],
@@ -78,12 +78,12 @@ List Pages = [SettingScreen() , AboutPage() , RegisterScreen() , SubjectScreen()
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(Icons.contact_phone_rounded),
+                  Icon(Icons.settings_applications_outlined),
                   SizedBox(
                     width: 10,
                   ),
                   Text(
-                    "Setting",
+                    "setting".tr(),
                     style: TextStyle(
                       color:  Colors.black,
                     ),
@@ -108,7 +108,7 @@ List Pages = [SettingScreen() , AboutPage() , RegisterScreen() , SubjectScreen()
                     width: 5,
                   ),
                   Text(
-                    "تسجيل الخروج",
+                    "logOut".tr(),
                     style: TextStyle(
                       color: Colors.black,
                     ),

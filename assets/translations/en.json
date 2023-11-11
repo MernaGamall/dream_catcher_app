@@ -25,7 +25,8 @@
  "dark" :  "Dark" ,
  "Light" :  "Light",
  "ChooseSubjectTitle" : "Videos",
- "playList" : "Play Lists :"
+ "playList" : "Play Lists :",
+ "logOut" : "Log Out"
 
 }
 

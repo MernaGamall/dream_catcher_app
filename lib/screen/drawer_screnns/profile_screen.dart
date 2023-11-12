@@ -18,21 +18,26 @@ class _ProfileScreenState extends State<ProfileScreen> {
         child: Padding(
           padding:  EdgeInsets.all(8.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+           crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
                 height: 50,
               ),
-              Column(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CircleAvatar(
-                    backgroundImage: AssetImage("assets/images/img_1.png"),
-                    radius: 60,
-                  ),
-                  Text(
-                    "name",
-                    style: TextStyle(fontSize: 40),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      CircleAvatar(
+                        backgroundImage: AssetImage("assets/images/img_1.png"),
+                        radius: 60,
+                      ),
+                      Text(
+                        "name",
+                        style: TextStyle(fontSize: 40),
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -90,14 +95,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ),
              SizedBox(height: 30,),
-             Column(
-             mainAxisAlignment: MainAxisAlignment.start,
-               children: [
-                 Text("Name :     "),
-                 Text("phone :     "),
-                 Text("email :     "),
-                 Text("stage :     "),
-               ],
+             Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: Column(
+               crossAxisAlignment: CrossAxisAlignment.start,
+                 children: [
+                   Text("Name :" + "Merna Gamal "  , style: TextStyle(fontSize: 20,color: Colors.red ),),
+                   SizedBox(height: 10,),
+                   Text("phone :01156922122  ", style: TextStyle(fontSize: 20,color: Colors.red ),),
+                   SizedBox(height: 10,),
+                   Text("email :gamalmerna549@gmai.com  ", style: TextStyle(fontSize: 20,color: Colors.red ),),
+                   SizedBox(height: 10,),
+                   Text("stage : 3Prep ", style: TextStyle(fontSize: 20,color: Colors.red ),),
+                 ],
+               ),
              )
             ],
           ),

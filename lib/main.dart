@@ -1,5 +1,7 @@
 
+import 'package:dream_catcher_app/screen/drawer_screnns/profile_screen.dart';
 import 'package:dream_catcher_app/screen/navigation_page.dart';
+import 'package:dream_catcher_app/screen/profile_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +18,7 @@ void main() async {
     EasyLocalization(
         supportedLocales: [Locale('en'), Locale('ar')],
         path: 'assets/translations',
-      // fallbackLocale: Locale('en'),
+       fallbackLocale: Locale('en'),
         startLocale: Locale('en'),
         child: MyApp(),),
   );
@@ -24,6 +26,7 @@ void main() async {
 }
 class MyApp extends StatefulWidget {
   MyApp({super.key});
+
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -62,8 +65,8 @@ class _MyAppState extends State<MyApp> {
         themeMode: _themeMode,
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
-        locale: context.locale,
-        home: NavigationPage()
+       // locale: context.locale,
+        home: ProfileScreen()
     );
   }
 

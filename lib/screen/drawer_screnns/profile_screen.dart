@@ -11,6 +11,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text("profile"),
       ),
@@ -34,8 +35,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         radius: 60,
                       ),
                       Text(
-                        "name",
-                        style: TextStyle(fontSize: 40),
+                        "Name...",
+                        style: TextStyle(fontSize: 35),
                       ),
                     ],
                   ),
@@ -54,6 +55,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         Icon(
                           Icons.badge_outlined,
                           size: 50,
+                          color: Colors.yellow,
                         ),
                         Text(
                           "My Badge",
@@ -67,8 +69,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     Column(
                       children: [
                         Icon(
-                          Icons.score,
+                          Icons.numbers_outlined,
                           size: 50,
+                          color: Colors.red,
                         ),
                         Text(
                           "Score",
@@ -84,6 +87,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         Icon(
                           Icons.quiz_outlined,
                           size: 50,
+                          color: Colors.blue,
                         ),
                         Text(
                           "My Quiz",
@@ -100,13 +104,34 @@ class _ProfileScreenState extends State<ProfileScreen> {
                child: Column(
                crossAxisAlignment: CrossAxisAlignment.start,
                  children: [
-                   Text("Name :" + "Merna Gamal "  , style: TextStyle(fontSize: 20,color: Colors.red ),),
+                   Row(
+                     children: [
+                       Text("Name :"  , style: TextStyle(fontSize: 20,color: Colors.red ),),
+                       Text(" Merna Gamal "  , style: TextStyle(fontSize: 20,color: Colors.black87 ),),
+                     ],
+                   ),
                    SizedBox(height: 10,),
-                   Text("phone :01156922122  ", style: TextStyle(fontSize: 20,color: Colors.red ),),
+                   Row(
+                     children: [
+                       Text("phone :  ", style: TextStyle(fontSize: 20,color: Colors.red ),),
+                       Text(" 01156922122   ", style: TextStyle(fontSize: 20,color: Colors.black87 ),),
+                     ],
+                   ),
                    SizedBox(height: 10,),
-                   Text("email :gamalmerna549@gmai.com  ", style: TextStyle(fontSize: 20,color: Colors.red ),),
+                   Row(
+                     children: [
+                       Text("email : ", style: TextStyle(fontSize: 20,color: Colors.red ),),
+                       Text(" gamalmerna549@gmai.com ", style: TextStyle(fontSize: 20,color: Colors.black87 ),),
+                     ],
+                   ),
+
                    SizedBox(height: 10,),
-                   Text("stage : 3Prep ", style: TextStyle(fontSize: 20,color: Colors.red ),),
+                   Row(
+                     children: [
+                       Text("stage : ", style: TextStyle(fontSize: 20,color: Colors.red ),),
+                       Text("3Prep  ", style: TextStyle(fontSize: 20,color: Colors.black87 ),),
+                     ],
+                   ),
                  ],
                ),
              )

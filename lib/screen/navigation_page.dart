@@ -17,7 +17,7 @@ class NavigationPage extends StatefulWidget {
 }
 
 class _NavigationPageState extends State<NavigationPage> {
-   int index = 0;
+   int index = 2;
    String AppBarTitle = "title of index 0";
 
 List Pages = [SettingScreen() , ProfileScreen() , HomeScreen() , SubjectScreen()];
@@ -151,7 +151,7 @@ List Pages = [SettingScreen() , ProfileScreen() , HomeScreen() , SubjectScreen()
               onPressed: () {
                 setState(() {
                   index = 0;
-                  AppBarTitle = "title of index 0";
+                  AppBarTitle = "exam";
                 });
               },
             ),

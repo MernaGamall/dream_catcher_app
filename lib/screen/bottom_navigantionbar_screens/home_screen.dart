@@ -12,9 +12,18 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return  Scaffold(
       body: SafeArea(
-        child: Column(
-
-        ),
+        child: ListView.builder(
+            itemCount: 50,
+            itemBuilder: (BuildContext context, int item){
+          return Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 50,
+              width: 50,
+              color: Colors.teal,
+            ),
+          );
+        }),
       ),
 
 

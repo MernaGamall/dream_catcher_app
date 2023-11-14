@@ -41,7 +41,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        scaffoldBackgroundColor: Color(0xffFFE8C7),
+      //  scaffoldBackgroundColor: Color(0xffFFE8C7),
         appBarTheme: AppBarTheme(
           color: Color(0xff247291),
         ),
@@ -66,7 +66,7 @@ class _MyAppState extends State<MyApp> {
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
        // locale: context.locale,
-        home: ProfileScreen()
+        home: NavigationPage()
     );
   }
 

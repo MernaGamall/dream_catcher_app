@@ -11,10 +11,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: Text("profile"),
-      ),
+      // backgroundColor: Colors.white,
+      // appBar: AppBar(
+      //   title: Text("profile"),
+      // ),
       body: SafeArea(
         child: Padding(
           padding:  EdgeInsets.all(8.0),
@@ -101,38 +101,45 @@ class _ProfileScreenState extends State<ProfileScreen> {
              SizedBox(height: 30,),
              Padding(
                padding: const EdgeInsets.all(8.0),
-               child: Column(
-               crossAxisAlignment: CrossAxisAlignment.start,
-                 children: [
-                   Row(
+               child: Container(
+                 color: Colors.teal,
+                 child: Padding(
+                   padding: const EdgeInsets.all(8.0),
+                   child: Column(
+                   crossAxisAlignment: CrossAxisAlignment.start,
                      children: [
-                       Text("Name :"  , style: TextStyle(fontSize: 20,color: Colors.red ),),
-                       Text(" Merna Gamal "  , style: TextStyle(fontSize: 20,color: Colors.black87 ),),
-                     ],
-                   ),
-                   SizedBox(height: 10,),
-                   Row(
-                     children: [
-                       Text("phone :  ", style: TextStyle(fontSize: 20,color: Colors.red ),),
-                       Text(" 01156922122   ", style: TextStyle(fontSize: 20,color: Colors.black87 ),),
-                     ],
-                   ),
-                   SizedBox(height: 10,),
-                   Row(
-                     children: [
-                       Text("email : ", style: TextStyle(fontSize: 20,color: Colors.red ),),
-                       Text(" gamalmerna549@gmai.com ", style: TextStyle(fontSize: 20,color: Colors.black87 ),),
-                     ],
-                   ),
+                       TextButton(onPressed: (){}, child: Text("edit")),
+                       Row(
+                         children: [
+                           Text("Name :"  , style: TextStyle(fontSize: 20,color: Colors.red ),),
+                           Text(" Merna Gamal "  , style: TextStyle(fontSize: 20,color: Colors.black87 ),),
+                         ],
+                       ),
+                       SizedBox(height: 10,),
+                       Row(
+                         children: [
+                           Text("phone :  ", style: TextStyle(fontSize: 20,color: Colors.red ),),
+                           Text(" 01156922122   ", style: TextStyle(fontSize: 20,color: Colors.black87 ),),
+                         ],
+                       ),
+                       SizedBox(height: 10,),
+                       Row(
+                         children: [
+                           Text("email : ", style: TextStyle(fontSize: 20,color: Colors.red ),),
+                           Text(" gamalmerna549@gmai.com ", style: TextStyle(fontSize: 20,color: Colors.black87 ),),
+                         ],
+                       ),
 
-                   SizedBox(height: 10,),
-                   Row(
-                     children: [
-                       Text("stage : ", style: TextStyle(fontSize: 20,color: Colors.red ),),
-                       Text("3Prep  ", style: TextStyle(fontSize: 20,color: Colors.black87 ),),
+                       SizedBox(height: 10,),
+                       Row(
+                         children: [
+                           Text("stage : ", style: TextStyle(fontSize: 20,color: Colors.red ),),
+                           Text("3Prep  ", style: TextStyle(fontSize: 20,color: Colors.black87 ),),
+                         ],
+                       ),
                      ],
                    ),
-                 ],
+                 ),
                ),
              )
             ],

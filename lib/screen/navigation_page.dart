@@ -9,6 +9,8 @@ import 'package:dream_catcher_app/screen/drawer_screnns/setting_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
+import 'drawer_screnns/mindset_apps/toss/toss_home_screen.dart';
+
 class NavigationPage extends StatefulWidget {
    NavigationPage({super.key});
 
@@ -86,6 +88,30 @@ List Pages = [SettingScreen() , ProfileScreen() , HomeScreen() , SubjectScreen()
                   ),
                   Text(
                     "setting".tr(),
+                    style: TextStyle(
+                      color:  Colors.black,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => TossHomeScreen(inputList: [],),
+                  ),
+                );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.settings_applications_outlined),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                   "toss",
                     style: TextStyle(
                       color:  Colors.black,
                     ),

@@ -13,13 +13,13 @@ class _HomeScreenState extends State<HomeScreen> {
     return  Scaffold(
       body: SafeArea(
         child: ListView.builder(
-            itemCount: 50,
+            itemCount: 3,
             itemBuilder: (BuildContext context, int item){
           return Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
               height: 50,
-              width: 50,
+              width: 90,
               color: Colors.teal,
             ),
           );

@@ -26,7 +26,9 @@
  "Light" :  "Light",
  "ChooseSubjectTitle" : "Videos",
  "playList" : "Play Lists :",
- "logOut" : "Log Out"
+ "logOut" : "Log Out" ,
+ "edit" : "Edit" ,
+ "cancel" : "Cancel"
 
 }
 

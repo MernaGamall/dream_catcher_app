@@ -401,7 +401,7 @@ class _EditScreenState extends State<EditScreen> {
                                 onPressed: () async {
                                 },
                                 child: Text(
-                                  "Edit",
+                                  "edit".tr(),
                                   style: TextStyle(
                                     fontSize: 25,
                                   ),
@@ -424,7 +424,7 @@ class _EditScreenState extends State<EditScreen> {
                                 onPressed: () async {
                                 },
                                 child: Text(
-                                 "Cancel",
+                                 "cancel".tr(),
                                   style: TextStyle(
                                     fontSize: 25,
                                   ),

@@ -25,6 +25,8 @@
   "Light" :  "مضئ",
   "ChooseSubjectTitle" : "الفيديوهات",
   "playList" : " قوائم التشغيل:  " ,
-  "logOut" : "تسجيل الخروج"
+  "logOut" : "تسجيل الخروج" ,
+  "edit" : "تعديل" ,
+  "cancel" : "الغاء"
 
 }

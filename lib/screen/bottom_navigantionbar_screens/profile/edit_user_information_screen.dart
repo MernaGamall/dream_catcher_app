@@ -98,6 +98,48 @@ class _EditScreenState extends State<EditScreen> {
                 child: ListView(
 
                   children: [
+
+                    image == null
+                        ? GestureDetector(
+                      onTap: () {
+                        showModalBottomSheet(
+                            context: context,
+                            builder: (builder) {
+                              return uplodeImage();
+                            });
+                      },
+                      child: CircleAvatar(
+                        //  minRadius: 5,
+                        // backgroundImage: AssetImage("assets/images/ss.jpg" , ) ,
+                        child: Icon(Icons.face_retouching_natural_rounded, size: 50, color: Colors.white,),
+                        // Column(
+                        //   mainAxisAlignment: MainAxisAlignment.end,
+                        //   children: [
+                        //     Text(
+                        //       "photo".tr(),
+                        //       style:
+                        //           TextStyle(color: Colors.black, fontSize: 20),
+                        //     ),
+                        //   ],
+                        // ),
+                        radius: 70,
+                        backgroundColor:  Color(0xffAAAFBA),
+                      ),
+                    )
+                        : GestureDetector(
+                      onTap: () {
+                        showModalBottomSheet(
+                            context: context,
+                            builder: (builder) {
+                              return uplodeImage();
+                            });
+                      },
+                      child: CircleAvatar(
+                        backgroundImage: FileImage(image!),
+                        radius: 100,
+                        backgroundColor: Colors.lightBlue,
+                      ),
+                    ),
                     // first name
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -341,96 +383,58 @@ class _EditScreenState extends State<EditScreen> {
                       ),
                     ),
 
-                    // image
-                    image == null
-                        ? GestureDetector(
-                      onTap: () {
-                        showModalBottomSheet(
-                            context: context,
-                            builder: (builder) {
-                              return uplodeImage();
-                            });
-                      },
-                      child: CircleAvatar(
-                        //  minRadius: 5,
-                        // backgroundImage: AssetImage("assets/images/ss.jpg" , ) ,
-                        child: Icon(Icons.face_retouching_natural_rounded, size: 50, color: Colors.white,),
-                        // Column(
-                        //   mainAxisAlignment: MainAxisAlignment.end,
-                        //   children: [
-                        //     Text(
-                        //       "photo".tr(),
-                        //       style:
-                        //           TextStyle(color: Colors.black, fontSize: 20),
-                        //     ),
-                        //   ],
-                        // ),
-                        radius: 70,
-                        backgroundColor:  Color(0xffAAAFBA),
-                      ),
-                    )
-                        : GestureDetector(
-                      onTap: () {
-                        showModalBottomSheet(
-                            context: context,
-                            builder: (builder) {
-                              return uplodeImage();
-                            });
-                      },
-                      child: CircleAvatar(
-                        backgroundImage: FileImage(image!),
-                        radius: 100,
-                        backgroundColor: Colors.lightBlue,
-                      ),
-                    ),
-
                     // create account button
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
 
-                            child: ElevatedButton(
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                  Color(0xffAAAFBA),
+                              child: ElevatedButton(
+                                style: ButtonStyle(
+                                  backgroundColor: MaterialStateProperty.all(
+                                    Colors.green,
+                                  ),
                                 ),
-                              ),
-                              onPressed: () async {
-                              },
-                              child: Text(
-                                "Edit",
-                                style: TextStyle(
-                                  fontSize: 25,
+                                onPressed: () async {
+                                },
+                                child: Text(
+                                  "Edit",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                  ),
                                 ),
                               ),
                             ),
                           ),
-                          Container(
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
 
-                            child: ElevatedButton(
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all(
-                                  Color(0xffAAAFBA),
+                              child: ElevatedButton(
+                                style: ButtonStyle(
+                                  backgroundColor: MaterialStateProperty.all(
+                                    Color(0xffAAAFBA),
+                                  ),
                                 ),
-                              ),
-                              onPressed: () async {
-                              },
-                              child: Text(
-                               "Cancel",
-                                style: TextStyle(
-                                  fontSize: 25,
+                                onPressed: () async {
+                                },
+                                child: Text(
+                                 "Cancel",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                  ),
                                 ),
                               ),
                             ),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-
-                    // Don't have account button
                   ],
                 ),
               ),

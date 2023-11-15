@@ -1,3 +1,4 @@
+import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/profile/edit_user_information_screen.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -108,7 +109,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                    child: Column(
                    crossAxisAlignment: CrossAxisAlignment.start,
                      children: [
-                       TextButton(onPressed: (){}, child: Text("edit")),
+                       TextButton(onPressed: (){
+                         Navigator.of(context).push(MaterialPageRoute(builder: (context) => EditScreen()));
+                       }, child: Text("edit")),
                        Row(
                          children: [
                            Text("Name :"  , style: TextStyle(fontSize: 20,color: Colors.red ),),

@@ -1,12 +1,12 @@
 
-import 'package:dream_catcher_app/screen/drawer_screnns/profile_screen.dart';
+import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/profile/profile_screen.dart';
 import 'package:dream_catcher_app/screen/navigation_page.dart';
-import 'package:dream_catcher_app/screen/profile_screen.dart';
+import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/profile/profile_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import 'screen/bottom_navigantionbar_screens/subjectQuestion_screen.dart';
-import 'screen/bottom_navigantionbar_screens/videos_screens.dart';
+import 'screen/bottom_navigantionbar_screens/video_screens/subjectQuestion_screen.dart';
+import 'screen/bottom_navigantionbar_screens/video_screens/videos_screens.dart';
 
 
 void main() async {

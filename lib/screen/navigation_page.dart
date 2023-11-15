@@ -1,3 +1,4 @@
+import 'package:dart_random_choice/dart_random_choice.dart';
 import 'package:dream_catcher_app/screen/authentication_screens/login_screen.dart';
 import 'package:dream_catcher_app/screen/authentication_screens/register_screen.dart';
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/home_screen.dart';
@@ -23,6 +24,7 @@ class _NavigationPageState extends State<NavigationPage> {
    String AppBarTitle = "title of index 0";
 
 List Pages = [SettingScreen() , ProfileScreen() , HomeScreen() , SubjectScreen()];
+List <String> quotes  = ["1" ,  " 2" , "3"];
 
   @override
   Widget build(BuildContext context) {
@@ -239,7 +241,7 @@ List Pages = [SettingScreen() , ProfileScreen() , HomeScreen() , SubjectScreen()
               context: context,
               builder: (context) {
                 return AlertDialog(
-                  content: Text("كلمه او نصيحه تظهر للطالب من مجموعه عشوائيه"),
+                  content: Text(randomChoice(quotes),),
 
                 );
               },

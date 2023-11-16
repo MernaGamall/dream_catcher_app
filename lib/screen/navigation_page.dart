@@ -1,3 +1,4 @@
+import 'package:dart_random_choice/dart_random_choice.dart';
 import 'package:dream_catcher_app/screen/authentication_screens/login_screen.dart';
 import 'package:dream_catcher_app/screen/authentication_screens/register_screen.dart';
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/home_screen.dart';
@@ -23,6 +24,25 @@ class _NavigationPageState extends State<NavigationPage> {
    String AppBarTitle = "title of index 0";
 
 List Pages = [SettingScreen() , ProfileScreen() , HomeScreen() , SubjectScreen()];
+   List<String> quotes = [
+     "“في البداية يتجاهلونك , ثم يسخرون منك , ثم يحاربونك , ثم تنتصر”",
+     " “خذ بالأسباب و كأنها كل شيء و توكل علي كأنها ليست بشيء” ",
+     "  اهتم بأن تحصل على ما تحبه، و الا ستكون مجبراً على ان تقبل ما تحصل عليه" ,
+     "  انطلق باتجاه القمر ، و حتى ان فشلت فانك ستستقر بين النجوم" ,
+     "  اذا لم نجد طريق النجاح فعلينا ان نبتكره ",
+     " تذكر دائماً .. ليس مهماً كم من الساعات تذاكر ، و لكن الاهم هو كيف تذاكر",
+     "  الأشخاص الناجحون يفعلون ما يرفض غير الناجحين فعله، هذا أمر غير سهل إطلاقا",
+     " إنك لا تخسر حقاً إلا إذا توقفت عن المحاولة",
+     "التعليم ليس أستعداداً للحياة، إنه الحياة ذاتها",
+     "الفشل هو أن تستسلم، أما النجاح فهو تحويل هذا الفشل إلى نجاح",
+     " النجاح يأتي لك بنجاح آخر، فلا تتوقف عن تحقيق الأهداف والنجاحات",
+     " اعمل على تنظيم حياتك وضع القواعد لها، فكل شخص منظم ناجح",
+     "الشيء الذي تؤجله للغد لن يكتمل، فأبدأ منذ الآن في عملك",
+     "قبل البحث عن النجاح لتحقيق أهدافك، تجول داخل نفسك وأجعلها أقوى",
+     "من لا يتحمل مشقة العلم بعض الوقت، يصيبه العناء طيلة العمر",
+     "التسليح بالعلم أقوى من التزين بأغلى الجواهر",
+     " إذا تعلمت من الفشل فأنت لم تفشل أبداً",
+   ];
 
   @override
   Widget build(BuildContext context) {
@@ -239,7 +259,7 @@ List Pages = [SettingScreen() , ProfileScreen() , HomeScreen() , SubjectScreen()
               context: context,
               builder: (context) {
                 return AlertDialog(
-                  content: Text("كلمه او نصيحه تظهر للطالب من مجموعه عشوائيه"),
+                  content: Text( randomChoice(quotes),),
 
                 );
               },

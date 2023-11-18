@@ -51,122 +51,128 @@ List Pages = [SubjectExamScreen() , ProfileScreen() , HomeScreen() , SubjectScre
       appBar: AppBar(
         title: Text(AppBarTitle!),
       ),
-      endDrawer: Drawer(
-        child: ListView(
-          children: [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                  color: Colors.black
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "شركة الروضه",
+      endDrawer: Row(
+        children: [
+          Drawer(
+            child: ListView(
+              children: [
+                DrawerHeader(
+                  decoration: BoxDecoration(
+                      color: Colors.black
                   ),
-                ],
-              ),
-            ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "شركة الروضه",
+                      ),
+                    ],
+                  ),
+                ),
 
 
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => AboutPage(),
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => AboutPage(),
+                      ),
+                    );
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.contact_phone_rounded),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        "about".tr(),
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ],
                   ),
-                );
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.contact_phone_rounded),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Text(
-                    "about".tr(),
-                    style: TextStyle(color: Colors.black),
-                  ),
-                ],
-              ),
-            ),
+                ),
 
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => SettingScreen(),
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => SettingScreen(),
+                      ),
+                    );
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.settings_applications_outlined),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "setting".tr(),
+                        style: TextStyle(
+                          color:  Colors.black,
+                        ),
+                      ),
+                    ],
                   ),
-                );
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.settings_applications_outlined),
-                  SizedBox(
-                    width: 10,
+                ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => TossHomeScreen(inputList: [],),
+                      ),
+                    );
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.settings_applications_outlined),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                       "toss",
+                        style: TextStyle(
+                          color:  Colors.black,
+                        ),
+                      ),
+                    ],
                   ),
-                  Text(
-                    "setting".tr(),
-                    style: TextStyle(
-                      color:  Colors.black,
-                    ),
+                ),
+                TextButton(
+                  onPressed: ()  {
+                    // // await _auth.signOut();
+                    //  Navigator.of(context).push(
+                    //    MaterialPageRoute(
+                    //      builder: (context) => StartScreen(),
+                    //    ),
+                    //  );
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.login_outlined),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        "logOut".tr(),
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => TossHomeScreen(inputList: [],),
-                  ),
-                );
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.settings_applications_outlined),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text(
-                   "toss",
-                    style: TextStyle(
-                      color:  Colors.black,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            TextButton(
-              onPressed: ()  {
-                // // await _auth.signOut();
-                //  Navigator.of(context).push(
-                //    MaterialPageRoute(
-                //      builder: (context) => StartScreen(),
-                //    ),
-                //  );
-              },
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.login_outlined),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Text(
-                    "logOut".tr(),
-                    style: TextStyle(
-                      color: Colors.black,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
+          ),
+          SizedBox(width: 20,),
+          Icon(Icons.mode_night_outlined)
+        ],
       ),
       bottomNavigationBar: BottomAppBar(
 

@@ -14,37 +14,53 @@ import 'package:flutter/material.dart';
 import 'drawer_screnns/mindset_apps/toss/toss_home_screen.dart';
 
 class NavigationPage extends StatefulWidget {
-   NavigationPage({super.key});
+  NavigationPage({super.key});
 
   @override
   State<NavigationPage> createState() => _NavigationPageState();
 }
 
 class _NavigationPageState extends State<NavigationPage> {
-   int index = 2;
-   String? AppBarTitle = "Dream Catcher";
+  int index = 2;
+  String? AppBarTitle = "Dream Catcher";
+  String? Badge = Badges ;
+  int? Score = 0;
 
-List Pages = [SubjectExamScreen() , ProfileScreen() , HomeScreen() , SubjectScreen()];
-   List<String> quotes = [
-     "“في البداية يتجاهلونك , ثم يسخرون منك , ثم يحاربونك , ثم تنتصر”",
-     " “خذ بالأسباب و كأنها كل شيء و توكل علي كأنها ليست بشيء” ",
-     "  اهتم بأن تحصل على ما تحبه، و الا ستكون مجبراً على ان تقبل ما تحصل عليه" ,
-     "  انطلق باتجاه القمر ، و حتى ان فشلت فانك ستستقر بين النجوم" ,
-     "  اذا لم نجد طريق النجاح فعلينا ان نبتكره ",
-     " تذكر دائماً .. ليس مهماً كم من الساعات تذاكر ، و لكن الاهم هو كيف تذاكر",
-     "  الأشخاص الناجحون يفعلون ما يرفض غير الناجحين فعله، هذا أمر غير سهل إطلاقا",
-     " إنك لا تخسر حقاً إلا إذا توقفت عن المحاولة",
-     "التعليم ليس أستعداداً للحياة، إنه الحياة ذاتها",
-     "الفشل هو أن تستسلم، أما النجاح فهو تحويل هذا الفشل إلى نجاح",
-     " النجاح يأتي لك بنجاح آخر، فلا تتوقف عن تحقيق الأهداف والنجاحات",
-     " اعمل على تنظيم حياتك وضع القواعد لها، فكل شخص منظم ناجح",
-     "الشيء الذي تؤجله للغد لن يكتمل، فأبدأ منذ الآن في عملك",
-     "قبل البحث عن النجاح لتحقيق أهدافك، تجول داخل نفسك وأجعلها أقوى",
-     "من لا يتحمل مشقة العلم بعض الوقت، يصيبه العناء طيلة العمر",
-     "التسليح بالعلم أقوى من التزين بأغلى الجواهر",
-     " إذا تعلمت من الفشل فأنت لم تفشل أبداً",
-   ];
+  List Pages = [
+    SubjectExamScreen(),
+    ProfileScreen(),
+    HomeScreen(),
+    SubjectScreen()
+  ];
 
+  List<String> quotes = [
+    "“في البداية يتجاهلونك , ثم يسخرون منك , ثم يحاربونك , ثم تنتصر”",
+    " “خذ بالأسباب و كأنها كل شيء و توكل علي كأنها ليست بشيء” ",
+    "  اهتم بأن تحصل على ما تحبه، و الا ستكون مجبراً على ان تقبل ما تحصل عليه",
+    "  انطلق باتجاه القمر ، و حتى ان فشلت فانك ستستقر بين النجوم",
+    "  اذا لم نجد طريق النجاح فعلينا ان نبتكره ",
+    " تذكر دائماً .. ليس مهماً كم من الساعات تذاكر ، و لكن الاهم هو كيف تذاكر",
+    "  الأشخاص الناجحون يفعلون ما يرفض غير الناجحين فعله، هذا أمر غير سهل إطلاقا",
+    " إنك لا تخسر حقاً إلا إذا توقفت عن المحاولة",
+    "التعليم ليس أستعداداً للحياة، إنه الحياة ذاتها",
+    "الفشل هو أن تستسلم، أما النجاح فهو تحويل هذا الفشل إلى نجاح",
+    " النجاح يأتي لك بنجاح آخر، فلا تتوقف عن تحقيق الأهداف والنجاحات",
+    " اعمل على تنظيم حياتك وضع القواعد لها، فكل شخص منظم ناجح",
+    "الشيء الذي تؤجله للغد لن يكتمل، فأبدأ منذ الآن في عملك",
+    "قبل البحث عن النجاح لتحقيق أهدافك، تجول داخل نفسك وأجعلها أقوى",
+    "من لا يتحمل مشقة العلم بعض الوقت، يصيبه العناء طيلة العمر",
+    "التسليح بالعلم أقوى من التزين بأغلى الجواهر",
+    " إذا تعلمت من الفشل فأنت لم تفشل أبداً",
+  ];
+  List<String> Badges = [
+    " assets/images/diamond1.png",
+    "assets/images/golden2.png ",
+    "assets/images/silver.png ",
+    "assets/images/broze1.png "
+  ];
+  if(Score => 90) {
+    Badge == Badges.
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,9 +73,7 @@ List Pages = [SubjectExamScreen() , ProfileScreen() , HomeScreen() , SubjectScre
             child: ListView(
               children: [
                 DrawerHeader(
-                  decoration: BoxDecoration(
-                      color: Colors.black
-                  ),
+                  decoration: BoxDecoration(color: Colors.black),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -69,8 +83,6 @@ List Pages = [SubjectExamScreen() , ProfileScreen() , HomeScreen() , SubjectScre
                     ],
                   ),
                 ),
-
-
                 TextButton(
                   onPressed: () {
                     Navigator.of(context).push(
@@ -93,7 +105,6 @@ List Pages = [SubjectExamScreen() , ProfileScreen() , HomeScreen() , SubjectScre
                     ],
                   ),
                 ),
-
                 TextButton(
                   onPressed: () {
                     Navigator.of(context).push(
@@ -112,7 +123,7 @@ List Pages = [SubjectExamScreen() , ProfileScreen() , HomeScreen() , SubjectScre
                       Text(
                         "setting".tr(),
                         style: TextStyle(
-                          color:  Colors.black,
+                          color: Colors.black,
                         ),
                       ),
                     ],
@@ -122,7 +133,9 @@ List Pages = [SubjectExamScreen() , ProfileScreen() , HomeScreen() , SubjectScre
                   onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => TossHomeScreen(inputList: [],),
+                        builder: (context) => TossHomeScreen(
+                          inputList: [],
+                        ),
                       ),
                     );
                   },
@@ -134,16 +147,16 @@ List Pages = [SubjectExamScreen() , ProfileScreen() , HomeScreen() , SubjectScre
                         width: 10,
                       ),
                       Text(
-                       "toss",
+                        "toss",
                         style: TextStyle(
-                          color:  Colors.black,
+                          color: Colors.black,
                         ),
                       ),
                     ],
                   ),
                 ),
                 TextButton(
-                  onPressed: ()  {
+                  onPressed: () {
                     // // await _auth.signOut();
                     //  Navigator.of(context).push(
                     //    MaterialPageRoute(
@@ -170,112 +183,108 @@ List Pages = [SubjectExamScreen() , ProfileScreen() , HomeScreen() , SubjectScre
               ],
             ),
           ),
-          SizedBox(width: 20,),
+          SizedBox(
+            width: 20,
+          ),
           Icon(Icons.mode_night_outlined)
         ],
       ),
       bottomNavigationBar: BottomAppBar(
-
-        notchMargin: 7,
-        color: Colors.white,
-        clipBehavior: Clip.antiAlias,
-        shape: AutomaticNotchedShape(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(50),
-              topRight:  Radius.circular(50),
-              bottomLeft: Radius.circular(50),
-              bottomRight: Radius.circular(50),
-            )
-          ),
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(40))
-          )
-        ),
-        child: Row(
-          children: [
-            SizedBox(width: 20,),
-            IconButton(
-              tooltip: 'Search',
-              icon:
-              index == 0 ?
-              Icon(Icons.event_note) :
-              Icon(Icons.note_sharp),
-              onPressed: () {
-                setState(() {
-                  index = 0;
-                  AppBarTitle = "exam";
-                });
-              },
-            ),
-            SizedBox(width: 20,),
-            IconButton(
-              tooltip: 'Favorite',
-              icon:   index == 1 ?
-              Icon(Icons.note_alt_outlined) :
-              Icon(Icons.note_sharp),
-
-              onPressed: () {
-                setState(() {
-                  index = 1;
-                  AppBarTitle = "profile";
-                });
-              },
-            ),
-          Expanded(child: SizedBox()),
-            IconButton(
-              tooltip: 'Favorite',
-              icon:   index == 2 ?
-              Icon(Icons.home) :
-              Icon(Icons.note_sharp),
-
-              onPressed: () {
-                setState(() {
-                  index = 2;
-                  AppBarTitle = "DreamCatcher";
-                });
-              },
-            ),
-            SizedBox(width: 20,),
-            IconButton(
-              tooltip: 'Favorite',
-              icon:   index == 3 ?
-              Icon(Icons.ondemand_video_outlined) :
-              Icon(Icons.note_sharp),
-              onPressed: () {
-                setState(() {
-                  index = 3;
-                  AppBarTitle = "ChooseSubjectTitle".tr();
-                });
-              },
-            ),
-            SizedBox(width: 20,),
-          ],
-        )
-
-      ),
+          notchMargin: 7,
+          color: Colors.white,
+          clipBehavior: Clip.antiAlias,
+          shape: AutomaticNotchedShape(
+              RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(50),
+                topRight: Radius.circular(50),
+                bottomLeft: Radius.circular(50),
+                bottomRight: Radius.circular(50),
+              )),
+              RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(40)))),
+          child: Row(
+            children: [
+              SizedBox(
+                width: 20,
+              ),
+              IconButton(
+                tooltip: 'Search',
+                icon: index == 0
+                    ? Icon(Icons.event_note)
+                    : Icon(Icons.note_sharp),
+                onPressed: () {
+                  setState(() {
+                    index = 0;
+                    AppBarTitle = "exam";
+                  });
+                },
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              IconButton(
+                tooltip: 'Favorite',
+                icon: index == 1
+                    ? Icon(Icons.note_alt_outlined)
+                    : Icon(Icons.note_sharp),
+                onPressed: () {
+                  setState(() {
+                    index = 1;
+                    AppBarTitle = "profile";
+                  });
+                },
+              ),
+              Expanded(child: SizedBox()),
+              IconButton(
+                tooltip: 'Favorite',
+                icon: index == 2 ? Icon(Icons.home) : Icon(Icons.note_sharp),
+                onPressed: () {
+                  setState(() {
+                    index = 2;
+                    AppBarTitle = "DreamCatcher";
+                  });
+                },
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              IconButton(
+                tooltip: 'Favorite',
+                icon: index == 3
+                    ? Icon(Icons.ondemand_video_outlined)
+                    : Icon(Icons.note_sharp),
+                onPressed: () {
+                  setState(() {
+                    index = 3;
+                    AppBarTitle = "ChooseSubjectTitle".tr();
+                  });
+                },
+              ),
+              SizedBox(
+                width: 20,
+              ),
+            ],
+          )),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(40)),
-
         ),
-        onPressed: (){
-
-            showDialog<void>(
-              context: context,
-              builder: (context) {
-                return AlertDialog(
-                  content: Text( randomChoice(quotes),),
-
-                );
-              },
-            );
-
+        onPressed: () {
+          showDialog<void>(
+            context: context,
+            builder: (context) {
+              return AlertDialog(
+                content: Text(
+                  randomChoice(quotes),
+                ),
+              );
+            },
+          );
         },
         child: Icon(Icons.add),
       ),
-
       body: Pages[index],
     );
   }

@@ -22,7 +22,7 @@ class NavigationPage extends StatefulWidget {
 
 class _NavigationPageState extends State<NavigationPage> {
    int index = 2;
-   String AppBarTitle = "title of index 0";
+   String? AppBarTitle = "Dream Catcher";
 
 List Pages = [SubjectExamScreen() , ProfileScreen() , HomeScreen() , SubjectScreen()];
    List<String> quotes = [
@@ -49,7 +49,7 @@ List Pages = [SubjectExamScreen() , ProfileScreen() , HomeScreen() , SubjectScre
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppBarTitle),
+        title: Text(AppBarTitle!),
       ),
       endDrawer: Drawer(
         child: ListView(
@@ -226,7 +226,7 @@ List Pages = [SubjectExamScreen() , ProfileScreen() , HomeScreen() , SubjectScre
               onPressed: () {
                 setState(() {
                   index = 2;
-                  AppBarTitle = "Home";
+                  AppBarTitle = "DreamCatcher";
                 });
               },
             ),

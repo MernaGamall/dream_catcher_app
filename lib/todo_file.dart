@@ -42,4 +42,9 @@
 // List examList = examQu.values.toList();
 // //  examQu.entries.forEach((e) => examList.add(Customer(e.key, e.value)));
 //
-// }
+// }`
+// diamond 100 %
+// gold 90 %
+// silver 75 %
+// bronze 50 %
+// sad face less than 50 %

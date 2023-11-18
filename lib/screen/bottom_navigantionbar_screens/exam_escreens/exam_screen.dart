@@ -195,7 +195,7 @@ class _ExamScreenState extends State<ExamScreen> {
                 }),
           ),
           ElevatedButton(onPressed: (){
-            var timer = Timer(
+             Timer(
               const Duration(seconds: 4),
                   () {
                 setState(() {

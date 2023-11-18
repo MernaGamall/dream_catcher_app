@@ -58,9 +58,9 @@ class _NavigationPageState extends State<NavigationPage> {
     "assets/images/silver.png ",
     "assets/images/broze1.png "
   ];
-  if (Score => 90) {
-    Badge == Badges
-  }
+  // if (Score => 90) {
+  //   Badge == Badges[0];
+  // }
 
   @override
   Widget build(BuildContext context) {

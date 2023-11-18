@@ -21,7 +21,7 @@ class _ExamScreenState extends State<ExamScreen> {
   List examQu = [
     {
       "title": "any quition we can use1",
-     "option" : ["1" , "2" , "3" ],
+     "option" : ["1" , "2"  ],
       "trueAnswer": "2"
     },
     {
@@ -31,7 +31,7 @@ class _ExamScreenState extends State<ExamScreen> {
     },
     {
       "title": "any quition we can use3",
-      "option" : ["7" , "8" , "9" ],
+      "option" : ["7" , "8" , "9"  , "10"],
       "trueAnswer": "7"
     },
   ];

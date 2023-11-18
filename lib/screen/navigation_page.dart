@@ -23,7 +23,7 @@ class NavigationPage extends StatefulWidget {
 class _NavigationPageState extends State<NavigationPage> {
   int index = 2;
   String? AppBarTitle = "Dream Catcher";
-  String? Badge = Badges ;
+  String? Badge = "Badges" ;
   int? Score = 0;
 
   List Pages = [
@@ -58,9 +58,10 @@ class _NavigationPageState extends State<NavigationPage> {
     "assets/images/silver.png ",
     "assets/images/broze1.png "
   ];
-  if(Score => 90) {
-    Badge == Badges.
+  if (Score => 90) {
+    Badge == Badges
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

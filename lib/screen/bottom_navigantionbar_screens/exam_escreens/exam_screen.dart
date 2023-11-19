@@ -14,7 +14,7 @@ class _ExamScreenState extends State<ExamScreen> {
   int finalTotalScore = 0;
   Color buttonColor = Colors.grey;
   bool? theAnswer;
-  bool? AnswerSelected = false;
+  //bool? AnswerSelected = false;
   String? studentAnswer = "";
   Map<int, bool> answerSubmitted = {};
 

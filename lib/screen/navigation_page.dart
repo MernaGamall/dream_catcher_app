@@ -290,3 +290,34 @@ class _NavigationPageState extends State<NavigationPage> {
     );
   }
 }
+
+
+// int calcNo (requird int x ,requird int y ,requird int z) {
+
+// return x + y / z
+// }
+
+
+// calcNo (x : 2 , z : 5 , y : 3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

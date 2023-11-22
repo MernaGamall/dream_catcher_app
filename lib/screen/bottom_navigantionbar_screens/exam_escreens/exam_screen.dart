@@ -35,6 +35,21 @@ class _ExamScreenState extends State<ExamScreen> {
       "option" : ["7" , "8" , "9"  , "10"],
       "trueAnswer": "7"
     },
+    {
+      "title": "any quition we can use1",
+     "option" : ["1" , "2"  ],
+      "trueAnswer": "2"
+    },
+    {
+      "title": "any quition we can use2",
+      "option" : ["4" , "5" , "6" ],
+      "trueAnswer": "6" ,
+    },
+    {
+      "title": "any quition we can use3",
+      "option" : ["7" , "8" , "9"  , "10"],
+      "trueAnswer": "7"
+    },
   ];
 
 //   void answer (){
@@ -74,7 +89,7 @@ class _ExamScreenState extends State<ExamScreen> {
 
                   String trueAnswer = examQu[item]["trueAnswer"];
 
-                  return Container(
+                  return Card(
                     child: Column(
                       children: [
                         Text(title),

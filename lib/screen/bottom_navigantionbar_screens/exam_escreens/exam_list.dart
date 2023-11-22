@@ -8,7 +8,10 @@ class ExamList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: ListView.builder(
+      body: GridView.builder(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+          ),
           itemCount: 50,
           itemBuilder: (BuildContext context, int item){
         return Padding(
@@ -21,9 +24,15 @@ class ExamList extends StatelessWidget {
                 ),
               );
             },
-            child: Container(
-              child: Text(
-                "exam number ${item + 1}" , style: TextStyle(fontSize: 20),
+            child: Card(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                 Image.asset("assets/images/icons8-exam-64.png"),
+                  Text(
+                    "exam number ${item + 1}" , style: TextStyle(fontSize: 20),
+                  ),
+                ],
               ),
             ),
           ),

@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               Row(
                 children: [
-                  Image.asset("assets/images/golden2.png"),
+                  Expanded(child: Image.asset("assets/images/golden2.png")),
                   Column(
                     children: [
                       Text(

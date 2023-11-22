@@ -15,8 +15,9 @@ class _ExamScreenState extends State<ExamScreen> {
   Color buttonColor = Colors.grey;
   bool? theAnswer;
   //bool? AnswerSelected = false;
-  String? studentAnswer = "";
+  //String? studentAnswer = "";
   Map<int, bool> answerSubmitted = {};
+  Map<int, String> studentAnswer = {};
 
   List examQu = [
     {
@@ -81,16 +82,16 @@ class _ExamScreenState extends State<ExamScreen> {
                           return RadioListTile<String>(
                             title: Text(option),
                             value: option,
-                            groupValue: studentAnswer,
+                            groupValue: studentAnswer[item],
                             onChanged: (String? value) {
                               setState(() {
-                                studentAnswer = value;
-                                if (studentAnswer == trueAnswer &&
+                                studentAnswer[item] = value!;
+                                if (studentAnswer[item] == trueAnswer &&
                                     answerSubmitted[item] != true) {
                                   totalScore += 1;
                                   answerSubmitted[item] = true;
                                 }
-                                if (studentAnswer != trueAnswer &&
+                                if (studentAnswer[item] != trueAnswer &&
                                     answerSubmitted[item] == true) {
                                   totalScore -= 1;
                                   answerSubmitted[item] = false;

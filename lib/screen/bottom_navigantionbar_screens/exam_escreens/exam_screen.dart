@@ -52,17 +52,6 @@ class _ExamScreenState extends State<ExamScreen> {
     },
   ];
 
-//   void answer (){
-//     setState(() {
-//       buttonColor = Colors.green;
-//     });
-// if (theAnswer == true){
-//   TotalScore +1;
-// } if (theAnswer == false){
-//       TotalScore ;
-//     }
-//
-//   }
   @override
   void initState() {
 

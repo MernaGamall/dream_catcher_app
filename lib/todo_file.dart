@@ -1,6 +1,6 @@
 // /// TODO : edit screen (like register screen)
 // ///
-// ///TODO :add apps from mindsit (calc - note - toss ..) in drawer
+// ///TODO :add apps from mindsit ( note - toss - reminder) in drawer
 // class Exam {
 //   List examQu = [
 //  {

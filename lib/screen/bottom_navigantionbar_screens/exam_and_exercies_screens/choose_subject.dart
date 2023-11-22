@@ -1,4 +1,4 @@
-import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/exam_escreens/exam_list.dart';
+import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/exam_and_exercies_screens/exam_list.dart';
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/video_screens/videos_screens.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';

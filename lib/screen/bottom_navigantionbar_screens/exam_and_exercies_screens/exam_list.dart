@@ -1,4 +1,4 @@
-import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/exam_escreens/exam_screen.dart';
+import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/exam_and_exercies_screens/exam_screen.dart';
 import 'package:flutter/material.dart';
 
 class ExamList extends StatelessWidget {

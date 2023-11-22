@@ -1,7 +1,7 @@
 import 'package:dart_random_choice/dart_random_choice.dart';
 import 'package:dream_catcher_app/screen/authentication_screens/login_screen.dart';
 import 'package:dream_catcher_app/screen/authentication_screens/register_screen.dart';
-import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/exam_escreens/choose_subject.dart';
+import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/exam_and_exercies_screens/choose_subject.dart';
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/home_screen.dart';
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/video_screens/subjectQuestion_screen.dart';
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/video_screens/videos_screens.dart';

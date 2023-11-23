@@ -36,7 +36,7 @@ class _ChooseOneScreenState extends State<ChooseOneScreen> {
                       onTap: (){
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => SubjectExamScreen(),
+                            builder: (context) => ChooseSubjectScreen(yourChoose: "Exams",),
                           ),
                         );
                       },
@@ -63,7 +63,7 @@ class _ChooseOneScreenState extends State<ChooseOneScreen> {
                       onTap: (){
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => SubjectExamScreen(),
+                            builder: (context) => ChooseSubjectScreen(yourChoose: "Exercises",),
                           ),
                         );
                       },

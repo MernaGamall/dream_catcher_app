@@ -1,8 +1,8 @@
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/exam_and_exercies_screens/exam_screen.dart';
 import 'package:flutter/material.dart';
 
-class ExamList extends StatelessWidget {
-  const ExamList({super.key});
+class ExercisesList extends StatelessWidget {
+  const ExercisesList({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class ExamList extends StatelessWidget {
                     children: [
                       Image.asset("assets/images/icons8-exam-64.png"),
                       Text(
-                        "exam number ${item + 1}" , style: TextStyle(fontSize: 20),
+                        "Exercises number ${item + 1}" , style: TextStyle(fontSize: 20),
                       ),
                     ],
                   ),

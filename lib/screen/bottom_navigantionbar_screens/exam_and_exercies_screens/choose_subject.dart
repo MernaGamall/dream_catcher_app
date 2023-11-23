@@ -1,23 +1,26 @@
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/exam_and_exercies_screens/exam_list.dart';
+import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/exam_and_exercies_screens/excercises_list.dart';
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/video_screens/videos_screens.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-class SubjectExamScreen extends StatefulWidget {
-  const SubjectExamScreen({super.key});
-
+class ChooseSubjectScreen extends StatefulWidget {
+   ChooseSubjectScreen({super.key , required this.yourChoose});
+String yourChoose = "";
   @override
-  State<SubjectExamScreen> createState() => _SubjectExamScreenState();
+  State<ChooseSubjectScreen> createState() => _ChooseSubjectScreenState();
 }
 
-class _SubjectExamScreenState extends State<SubjectExamScreen> {
+class _ChooseSubjectScreenState extends State<ChooseSubjectScreen> {
   String? studentStage = "prep2".tr();
   String? studentLang = "Arabic".tr();
 
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(widget.yourChoose),
+      ),
       body:   SafeArea(
         child: Center(
           child: Column(
@@ -35,7 +38,7 @@ class _SubjectExamScreenState extends State<SubjectExamScreen> {
                       onTap: (){
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => ExamList(),
+                            builder: (context) => widget.yourChoose == "Exams" ? ExamList() :  ExercisesList () ,
                           ),
                         );
                       },
@@ -60,9 +63,10 @@ class _SubjectExamScreenState extends State<SubjectExamScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: GestureDetector(
                       onTap: (){
+
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => ExamList(),
+                            builder: (context) => widget.yourChoose == "Exams" ? ExamList() :  ExercisesList () ,
                           ),
                         );
                       },
@@ -85,7 +89,7 @@ class _SubjectExamScreenState extends State<SubjectExamScreen> {
                     onTap: (){
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => VideosScreen(),
+                          builder: (context) => widget.yourChoose == "Exams" ? ExamList() :  ExercisesList () ,
                         ),
                       );
                     },

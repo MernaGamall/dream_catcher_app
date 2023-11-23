@@ -1,16 +1,17 @@
+import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/exam_and_exercies_screens/choose_subject.dart';
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/exam_and_exercies_screens/exam_list.dart';
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/video_screens/videos_screens.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-class SubjectExamScreen extends StatefulWidget {
-  const SubjectExamScreen({super.key});
+class ChooseOneScreen extends StatefulWidget {
+  const ChooseOneScreen({super.key});
 
   @override
-  State<SubjectExamScreen> createState() => _SubjectExamScreenState();
+  State<ChooseOneScreen> createState() => _ChooseOneScreenState();
 }
 
-class _SubjectExamScreenState extends State<SubjectExamScreen> {
+class _ChooseOneScreenState extends State<ChooseOneScreen> {
   String? studentStage = "prep2".tr();
   String? studentLang = "Arabic".tr();
 
@@ -20,9 +21,10 @@ class _SubjectExamScreenState extends State<SubjectExamScreen> {
       body:   SafeArea(
         child: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(height: 50,),
-              Text("choose subject",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+              Text("Its Time For... ",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25,color: Colors.red),),
               SizedBox(height: 20,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -34,7 +36,7 @@ class _SubjectExamScreenState extends State<SubjectExamScreen> {
                       onTap: (){
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => ExamList(),
+                            builder: (context) => SubjectExamScreen(),
                           ),
                         );
                       },
@@ -48,8 +50,8 @@ class _SubjectExamScreenState extends State<SubjectExamScreen> {
                               Container(
                                   height: 150,
                                   width: 150,
-                                  child: Image.asset("assets/images/img_1.jpg")),
-                              Text(" exams",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),],
+                                  child: Icon(Icons.pending_actions_rounded,size: 80,)),
+                              Text(" Exams",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),],
                           )
                       ),
                     ),
@@ -61,7 +63,7 @@ class _SubjectExamScreenState extends State<SubjectExamScreen> {
                       onTap: (){
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => VideosScreen(),
+                            builder: (context) => SubjectExamScreen(),
                           ),
                         );
                       },
@@ -74,8 +76,8 @@ class _SubjectExamScreenState extends State<SubjectExamScreen> {
                               Container(
                                   height: 150,
                                   width: 150,
-                                  child: Image.asset("assets/images/img_2.png")),
-                              Text("exercies ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold)),],
+                                  child: Icon(Icons.receipt_long_rounded,size: 80,),),
+                              Text("Exercises ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold)),],
                           )
                       ),
                     ),

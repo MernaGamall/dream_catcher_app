@@ -17,12 +17,13 @@ class _SubjectExamScreenState extends State<SubjectExamScreen> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      appBar: AppBar(),
       body:   SafeArea(
         child: Center(
           child: Column(
             children: [
               SizedBox(height: 50,),
-              Text("choose subject",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),),
+              Text("choose subject:   ",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25,color: Colors.red),),
               SizedBox(height: 20,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -61,7 +62,7 @@ class _SubjectExamScreenState extends State<SubjectExamScreen> {
                       onTap: (){
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => VideosScreen(),
+                            builder: (context) => ExamList(),
                           ),
                         );
                       },

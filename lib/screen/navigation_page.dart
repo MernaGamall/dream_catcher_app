@@ -8,10 +8,12 @@ import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/video_scr
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/video_screens/videos_screens.dart';
 import 'package:dream_catcher_app/screen/drawer_screnns/about_screen.dart';
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/profile/profile_screen.dart';
+import 'package:dream_catcher_app/screen/drawer_screnns/mindset_apps/note_app/note_first_screen.dart';
 import 'package:dream_catcher_app/screen/drawer_screnns/setting_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-
+import 'package:hive_flutter/adapters.dart';
+import 'drawer_screnns/mindset_apps/stop_watch/stop_watch_screen.dart';
 import 'drawer_screnns/mindset_apps/toss/toss_home_screen.dart';
 
 class NavigationPage extends StatefulWidget {
@@ -150,6 +152,56 @@ class _NavigationPageState extends State<NavigationPage> {
                       ),
                       Text(
                         "toss",
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => StopWatchScreen(),
+                      ),
+                    );
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.settings_applications_outlined),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "StopWatch",
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                TextButton(
+                  onPressed: () async {
+
+                    await Hive.openBox("boxName");
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => NoteHomeScreen(),
+                      ),
+                    );
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.settings_applications_outlined),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "note",
                         style: TextStyle(
                           color: Colors.black,
                         ),

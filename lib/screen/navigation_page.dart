@@ -77,12 +77,12 @@ class _NavigationPageState extends State<NavigationPage> {
             child: ListView(
               children: [
                 DrawerHeader(
-                  decoration: BoxDecoration(color: Colors.black),
+                  //decoration: BoxDecoration(color: Colors.black),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "شركة الروضه",
+                        "Dream Catcher",
                       ),
                     ],
                   ),

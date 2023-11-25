@@ -1,6 +1,8 @@
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/exam_and_exercies_screens/exam_screen.dart';
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/profile/profile_screen.dart';
 import 'package:dream_catcher_app/screen/drawer_screnns/mindset_apps/note_app/model_class.dart';
+import 'package:dream_catcher_app/screen/drawer_screnns/mindset_apps/reminder/reminder_model_class.dart';
 import 'package:dream_catcher_app/screen/navigation_page.dart';
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/profile/profile_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -13,12 +15,23 @@ import 'package:path_provider/path_provider.dart';
 
 void main() async {
 
+  AwesomeNotifications().initialize(
+    "",
+    [
+      NotificationChannel(
+          channelKey: 'reminder key',
+          channelName: 'reminder name',
+          channelDescription: 'description'),
+    ],
+  );
+
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   WidgetsFlutterBinding.ensureInitialized();
   final directory = await getApplicationDocumentsDirectory();
   Hive.init(directory.path);
   Hive.registerAdapter(ModelClassAdapter());
+  Hive.registerAdapter(ReminderModelClassAdapter());
   runApp(
     EasyLocalization(
         supportedLocales: [Locale('en'), Locale('ar')],
@@ -31,7 +44,8 @@ void main() async {
 }
 class MyApp extends StatefulWidget {
   MyApp({super.key});
-
+  static final GlobalKey<NavigatorState> navigatorKey =
+  GlobalKey<NavigatorState>();
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -70,6 +84,7 @@ class _MyAppState extends State<MyApp> {
         themeMode: _themeMode,
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
+        navigatorKey: MyApp.navigatorKey,
        // locale: context.locale,
         home: NavigationPage()
     );

@@ -11,6 +11,7 @@ import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/profile/p
 import 'package:dream_catcher_app/screen/drawer_screnns/mindset_apps/note_app/note_first_screen.dart';
 import 'package:dream_catcher_app/screen/drawer_screnns/mindset_apps/reminder/reminder_Screen.dart';
 import 'package:dream_catcher_app/screen/drawer_screnns/mindset_apps/reminder/reminder_first_screen.dart';
+import 'package:dream_catcher_app/screen/drawer_screnns/my_tools.dart';
 import 'package:dream_catcher_app/screen/drawer_screnns/setting_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -136,62 +137,11 @@ class _NavigationPageState extends State<NavigationPage> {
                   ),
                 ),
                 TextButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => TossHomeScreen(
-                          inputList: [],
-                        ),
-                      ),
-                    );
-                  },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.settings_applications_outlined),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        "toss",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                TextButton(
-                  onPressed: () async {
-                    await Hive.openBox("reminderBox");
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => ReminderFirstPage(),
-                      ),
-                    );
-                  },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.settings_applications_outlined),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        "Reminder",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                TextButton(
                   onPressed: ()  {
 
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => StopWatchScreen(),
+                        builder: (context) => MyToolsScreen(),
                       ),
                     );
                   },
@@ -203,7 +153,7 @@ class _NavigationPageState extends State<NavigationPage> {
                         width: 10,
                       ),
                       Text(
-                        "StopWatch",
+                        "My Tools",
                         style: TextStyle(
                           color: Colors.black,
                         ),
@@ -211,32 +161,7 @@ class _NavigationPageState extends State<NavigationPage> {
                     ],
                   ),
                 ),
-                TextButton(
-                  onPressed: () async {
 
-                    await Hive.openBox("boxName");
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => NoteHomeScreen(),
-                      ),
-                    );
-                  },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.settings_applications_outlined),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        "note",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
                 TextButton(
                   onPressed: () {
                     // // await _auth.signOut();

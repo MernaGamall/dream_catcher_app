@@ -72,129 +72,127 @@ class _NavigationPageState extends State<NavigationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppBarTitle!),
+        title: Row(
+          children: [
+            Text(AppBarTitle!),
+            SizedBox(width: 250,),
+            Icon(Icons.mode_night_outlined)
+          ],
+        ),
       ),
-      endDrawer: Row(
-        children: [
-          Drawer(
-            child: ListView(
-              children: [
-                DrawerHeader(
-                  //decoration: BoxDecoration(color: Colors.black),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Dream Catcher",
-                      ),
-                    ],
+      endDrawer:  Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(
+              //decoration: BoxDecoration(color: Colors.black),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Dream Catcher",
                   ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => AboutPage(),
-                      ),
-                    );
-                  },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.contact_phone_rounded),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        "about".tr(),
-                        style: TextStyle(color: Colors.black),
-                      ),
-                    ],
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => SettingScreen(),
-                      ),
-                    );
-                  },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.settings_applications_outlined),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        "setting".tr(),
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                TextButton(
-                  onPressed: ()  {
-
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => MyToolsScreen(),
-                      ),
-                    );
-                  },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.settings_applications_outlined),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(
-                        "My Tools",
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-
-                TextButton(
-                  onPressed: () {
-                    // // await _auth.signOut();
-                    //  Navigator.of(context).push(
-                    //    MaterialPageRoute(
-                    //      builder: (context) => StartScreen(),
-                    //    ),
-                    //  );
-                  },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.login_outlined),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        "logOut".tr(),
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          SizedBox(
-            width: 20,
-          ),
-          Icon(Icons.mode_night_outlined)
-        ],
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => AboutPage(),
+                  ),
+                );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.contact_phone_rounded),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text(
+                    "about".tr(),
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ],
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => SettingScreen(),
+                  ),
+                );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.settings_applications_outlined),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "setting".tr(),
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            TextButton(
+              onPressed: ()  {
+
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => MyToolsScreen(),
+                  ),
+                );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.settings_applications_outlined),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    "My Tools",
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            TextButton(
+              onPressed: () {
+                // // await _auth.signOut();
+                //  Navigator.of(context).push(
+                //    MaterialPageRoute(
+                //      builder: (context) => StartScreen(),
+                //    ),
+                //  );
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.login_outlined),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text(
+                    "logOut".tr(),
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
       bottomNavigationBar: BottomAppBar(
           notchMargin: 7,

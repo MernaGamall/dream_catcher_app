@@ -38,7 +38,6 @@ class _NavigationPageState extends State<NavigationPage> {
     HomeScreen(),
     SubjectScreen()
   ];
-
   List<String> quotes = [
     "“في البداية يتجاهلونك , ثم يسخرون منك , ثم يحاربونك , ثم تنتصر”",
     " “خذ بالأسباب و كأنها كل شيء و توكل علي كأنها ليست بشيء” ",
@@ -73,9 +72,9 @@ class _NavigationPageState extends State<NavigationPage> {
     return Scaffold(
       appBar: AppBar(
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(AppBarTitle!),
-            SizedBox(width: 250,),
             Icon(Icons.mode_night_outlined)
           ],
         ),
@@ -195,7 +194,8 @@ class _NavigationPageState extends State<NavigationPage> {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-          notchMargin: 7,
+        height: 60,
+          notchMargin: 5,
           color: Colors.white,
           clipBehavior: Clip.antiAlias,
           shape: AutomaticNotchedShape(
@@ -214,10 +214,12 @@ class _NavigationPageState extends State<NavigationPage> {
                 width: 20,
               ),
               IconButton(
-                tooltip: 'Search',
                 icon: index == 0
-                    ? Icon(Icons.event_note)
-                    : Icon(Icons.note_sharp),
+                    ? Container(
+                     width: 600,
+                     height: 400,
+                    child: Image.asset("assets/images/exam icon color.png" , height: 800, width: 800,))
+                    :  Image.asset("assets/images/exam icon b&w.png", height: 200, width: 200,),
                 onPressed: () {
                   setState(() {
                     index = 0;
@@ -231,8 +233,8 @@ class _NavigationPageState extends State<NavigationPage> {
               IconButton(
                 tooltip: 'Favorite',
                 icon: index == 1
-                    ? Icon(Icons.note_alt_outlined)
-                    : Icon(Icons.note_sharp),
+                    ?Image.asset("assets/images/profile color.png",width: 50,height: 50,)
+                    : Image.asset("assets/images/profile b&w.png",width: 100,height: 100,),
                 onPressed: () {
                   setState(() {
                     index = 1;

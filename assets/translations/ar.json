@@ -34,5 +34,6 @@
   "falsePassword" : "ادخل كلمة المرور الصحيحه",
   "timeFor" : "..... جه وقت ال " ,
   "Exams" : "امتحانات" ,
-  "Exercises" : "تدريبات"
+  "Exercises" : "تدريبات",
+  "ChooseSubject" : ":اختر ماده"
 }

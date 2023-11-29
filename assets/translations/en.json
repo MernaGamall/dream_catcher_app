@@ -35,7 +35,8 @@
  "falsePassword" : "Enter Correct Password",
  "timeFor" : "Its Time For... " ,
  "Exams" : "Exams" ,
- "Exercises" : "Exercises"
+ "Exercises" : "Exercises" ,
+ "ChooseSubject" : "choose subject:"
 
 
 

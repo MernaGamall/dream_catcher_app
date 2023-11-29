@@ -103,13 +103,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
         ),
       ),
       body: Scrollbar(
-        // scrollbarOrientation: ScrollbarOrientation.right,
         interactive: true,
         radius: Radius.circular(50),
-          //radius: Radius.elliptical(10, 100),
-       // radius: Radius.zero,
-        thumbVisibility : true,
-        //trackVisibility: true,
+        thumbVisibility: true,
         thickness: 10,
         child: SafeArea(
           child: Center(
@@ -118,7 +114,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
               child: Form(
                 key: formKey,
                 child: ListView(
-                  // mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     // first name
                     Padding(
@@ -131,12 +126,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         child: Padding(
                           padding: const EdgeInsets.all(5.0),
                           child: TextFormField(
-                            validator: (String? value) {
-                              if (value == "" || value!.contains("@ / .com")) {
-                                return " من فضلك أدخل الحساب و يجب ان يحتوي علي @ / com. ";
-                              }
-                              return null;
-                            },
                             keyboardType: TextInputType.emailAddress,
                             onChanged: (value) {
                               email = value;
@@ -160,12 +149,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         child: Padding(
                           padding: const EdgeInsets.all(5.0),
                           child: TextFormField(
-                            validator: (String? value) {
-                              if (value == "" || value!.contains("@ / .com")) {
-                                return " من فضلك أدخل الحساب و يجب ان يحتوي علي @ / com. ";
-                              }
-                              return null;
-                            },
                             keyboardType: TextInputType.emailAddress,
                             onChanged: (value) {
                               email = value;
@@ -190,12 +173,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         child: Padding(
                           padding: const EdgeInsets.all(5.0),
                           child: TextFormField(
-                            validator: (String? value) {
-                              if (value == "" || value!.contains("@ / .com")) {
-                                return " من فضلك أدخل الحساب و يجب ان يحتوي علي @ / com. ";
-                              }
-                              return null;
-                            },
                             keyboardType: TextInputType.number,
                             onChanged: (value) {
                               email = value;
@@ -209,64 +186,29 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       ),
                     ),
 
-                   // SizedBox(
-                   //    height: 25,
-                   //  ),
+                    // SizedBox(
+                    //    height: 25,
+                    //  ),
 
                     // student stage
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
-
-                        child:
-                        DropdownMenu<String>(
-                          menuStyle: MenuStyle(
-
-                          ),
-                          hintText: "stage".tr(),
-                          // helperText: "stage".tr(),
-                          width: MediaQuery.of(context).size.width * 0.92,
-                         // initialSelection: "stage".tr(),
-                          onSelected: (String? value) {
-                            // This is called when the user selects an item.
-                            setState(() {
-                              studentStage = value!;
-                            });
-                          },
-                          dropdownMenuEntries: stages.map<DropdownMenuEntry<String>>((String value) {
-                            return DropdownMenuEntry<String>(
-                                value: value,
-                                label: value
-                            );
-                          }).toList(),
-                        )
-                        // DropdownButton<String>(
-                        //
-                        //  // focusNode: FocusNode(),
-                        //  // enableFeedback: true,
-                        // //  autofocus: true,
-                        //   hint: Text("stage".tr()),
-                        //   underline: Container(),
-                        //   borderRadius: BorderRadius.all(Radius.circular(15)),
-                        //   value: studentStage,
-                        //   onChanged: (String? newValue) {
-                        //     setState(() {
-                        //       studentStage = newValue!;
-                        //     });
-                        //   },
-                        //   isExpanded: true,
-                        //   items: stages.map((String value) {
-                        //     return DropdownMenuItem<String>(
-                        //       value: value,
-                        //       child: Center(
-                        //         child: Text(
-                        //           value,
-                        //         ),
-                        //       ),
-                        //     );
-                        //   }).toList(),
-                        // ),
-                      ),
+                          child: DropdownMenu<String>(
+                        menuStyle: MenuStyle(),
+                        hintText: "stage".tr(),
+                        width: MediaQuery.of(context).size.width * 0.92,
+                        onSelected: (String? value) {
+                          setState(() {
+                            studentStage = value!;
+                          });
+                        },
+                        dropdownMenuEntries: stages
+                            .map<DropdownMenuEntry<String>>((String value) {
+                          return DropdownMenuEntry<String>(
+                              value: value, label: value);
+                        }).toList(),
+                      )),
                     ),
 
                     //arabic or language
@@ -374,21 +316,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   });
                             },
                             child: CircleAvatar(
-                            //  minRadius: 5,
-                             // backgroundImage: AssetImage("assets/images/ss.jpg" , ) ,
-                              child: Icon(Icons.face_retouching_natural_rounded, size: 50, color: Colors.white,),
-                              // Column(
-                              //   mainAxisAlignment: MainAxisAlignment.end,
-                              //   children: [
-                              //     Text(
-                              //       "photo".tr(),
-                              //       style:
-                              //           TextStyle(color: Colors.black, fontSize: 20),
-                              //     ),
-                              //   ],
-                              // ),
-                             radius: 70,
-                              backgroundColor:  Color(0xffAAAFBA),
+                              child: Icon(
+                                Icons.face_retouching_natural_rounded,
+                                size: 50,
+                                color: Colors.white,
+                              ),
+                              radius: 70,
+                              backgroundColor: Color(0xffAAAFBA),
                             ),
                           )
                         : GestureDetector(
@@ -500,38 +434,4 @@ class _RegisterScreenState extends State<RegisterScreen> {
       ),
     );
   }
-
-  // Future<void> validation_done(BuildContext context) async {
-  //   final isExistingUser = await checkUserExists(email);
-  //   if (isExistingUser) {
-  //     ScaffoldMessenger.of(context).showSnackBar(
-  //       SnackBar(
-  //         backgroundColor: Colors.blueAccent,
-  //         content: Text("الحساب موجود بالفعل"),
-  //       ),
-  //     );
-  //   } else {
-  //     await add_new_user(context);
-  //   }
-  // }
-
-  // Future<void> add_new_user(BuildContext context) async {
-  //   setState(() {
-  //     _saving = true;
-  //   });
-  //   try {
-  //     await _auth.createUserWithEmailAndPassword(
-  //         email: email, password: password);
-  //     Navigator.of(context).pushReplacement(
-  //       MaterialPageRoute(
-  //         builder: (context) => HomeScreen(),
-  //       ),
-  //     );
-  //     setState(() {
-  //       _saving = false;
-  //     });
-  //   } catch (e) {
-  //     print("the problem $e");
-  //   }
-  // }
 }

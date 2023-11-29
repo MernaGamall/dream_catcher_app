@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class ExamScreen extends StatefulWidget {
@@ -14,47 +14,44 @@ class _ExamScreenState extends State<ExamScreen> {
   int finalTotalScore = 0;
   Color buttonColor = Colors.grey;
   bool? theAnswer;
-  //bool? AnswerSelected = false;
-  //String? studentAnswer = "";
   Map<int, bool> answerSubmitted = {};
   Map<int, String> studentAnswer = {};
 
   List examQu = [
     {
       "title": "any quition we can use1",
-     "option" : ["1" , "2"  ],
+      "option": ["1", "2"],
       "trueAnswer": "2"
     },
     {
       "title": "any quition we can use2",
-      "option" : ["4" , "5" , "6" ],
-      "trueAnswer": "6" ,
+      "option": ["4", "5", "6"],
+      "trueAnswer": "6",
     },
     {
       "title": "any quition we can use3",
-      "option" : ["7" , "8" , "9"  , "10"],
+      "option": ["7", "8", "9", "10"],
       "trueAnswer": "7"
     },
     {
       "title": "any quition we can use1",
-     "option" : ["1" , "2"  ],
+      "option": ["1", "2"],
       "trueAnswer": "2"
     },
     {
       "title": "any quition we can use2",
-      "option" : ["4" , "5" , "6" ],
-      "trueAnswer": "6" ,
+      "option": ["4", "5", "6"],
+      "trueAnswer": "6",
     },
     {
       "title": "any quition we can use3",
-      "option" : ["7" , "8" , "9"  , "10"],
+      "option": ["7", "8", "9", "10"],
       "trueAnswer": "7"
     },
   ];
 
   @override
   void initState() {
-
     super.initState();
   }
 
@@ -65,12 +62,9 @@ class _ExamScreenState extends State<ExamScreen> {
         title: Text(totalScore.toString()),
       ),
       body: Column(
-
         children: [
           Expanded(
             child: ListView.builder(
-              // [ 0 , 1 , 2 ]
-              // print nameoflist[2]["title"]
                 itemCount: examQu.length,
                 itemBuilder: (BuildContext context, int item) {
                   String title = examQu[item]["title"];
@@ -100,120 +94,30 @@ class _ExamScreenState extends State<ExamScreen> {
                                   totalScore -= 1;
                                   answerSubmitted[item] = false;
                                 }
-                                // if (studentAnswer == trueAnswer){
-                                //   TotalScore = TotalScore + 1;
-                                // }
                               });
                             },
                           );
                         }),
-                    // RadioListTile<String>(
-                    //   title: Text(examQu[item]["option"][0]),
-                    //   value: "option",
-                    //   groupValue: examQu[item]["option"][0],
-                    //   onChanged: (String? value) {
-                    //     setState(() {
-                    //       examQu[item]["trueAnswer"] = value;
-                    //       TotalScore = TotalScore + 1;
-                    //     });
-                    //   },
-                    // )
-                        // ElevatedButton(
-                        //   onPressed: () {
-                        //     if (answer1 == trueAnswer) {
-                        //       setState(() {
-                        //         TotalScore = TotalScore + 1;
-                        //       });
-                        //     } else {
-                        //       print(
-                        //           "00000000000000000000000000000000000000000000000");
-                        //     }
-                        //     print(TotalScore);
-                        //   },
-                        //   child: Text(answer1),
-                        //   style: ButtonStyle(
-                        //       backgroundColor:
-                        //           MaterialStateProperty.all(buttonColor)),
-                        // ),
-                        // ElevatedButton(
-                        //   onPressed: () {
-                        //
-                        //     if (answer2 == trueAnswer) {
-                        //       setState(() {
-                        //         TotalScore = TotalScore + 1;
-                        //       });
-                        //     }
-                        //
-                        //     if (TotalScore == TotalScore + 1){
-                        //       TotalScore = TotalScore + 0;
-                        //     }
-                        //
-                        //     else {
-                        //       print(
-                        //           "00000000000000000000000000000000000000000000000");
-                        //     }
-                        //     print(TotalScore);
-                        //   },
-                        //   child: Text(answer2),
-                        //   style: ButtonStyle(
-                        //       backgroundColor:
-                        //           MaterialStateProperty.all(buttonColor)),
-                        // ),
-                        // ElevatedButton(
-                        //   onPressed: () {
-                        //     if (answer3 == trueAnswer) {
-                        //       setState(() {
-                        //         TotalScore = TotalScore + 1;
-                        //       });
-                        //     } else {
-                        //       print(
-                        //           "00000000000000000000000000000000000000000000000");
-                        //     }
-                        //     print(TotalScore);
-                        //   },
-                        //   child: Text(answer3),
-                        //   style: ButtonStyle(
-                        //       backgroundColor:
-                        //           MaterialStateProperty.all(buttonColor)),
-                        // ),
-                        // ElevatedButton(
-                        //   onPressed: () {
-                        //     if (answer4 == trueAnswer) {
-                        //       setState(() {
-                        //         TotalScore = TotalScore + 1;
-                        //       });
-                        //     } else {
-                        //       print(
-                        //           "00000000000000000000000000000000000000000000000");
-                        //     }
-                        //
-                        //     print(TotalScore);
-                        //   },
-                        //   child: Text(answer4),
-                        //   style: ButtonStyle(
-                        //       backgroundColor:
-                        //           MaterialStateProperty.all(buttonColor)),
-                        // ),
                       ],
                     ),
                   );
                 }),
           ),
-          ElevatedButton(onPressed: (){
-             Timer(
-              const Duration(seconds: 4),
-                  () {
-                setState(() {
-                  finalTotalScore = totalScore ;
-                });
-              },
-            );
-
-          }, child: Text("Done"))
+          ElevatedButton(
+            onPressed: () {
+              Timer(
+                const Duration(seconds: 4),
+                () {
+                  setState(() {
+                    finalTotalScore = totalScore;
+                  });
+                },
+              );
+            },
+            child: Text("submit".tr()),
+          )
         ],
       ),
     );
   }
 }
-
-// يختار الاجابه مره واحده لو غيرها يمسح الدرجه

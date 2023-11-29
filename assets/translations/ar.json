@@ -28,8 +28,8 @@
   "logOut" : "تسجيل الخروج" ,
   "edit" : "تعديل" ,
   "cancel" : "الغاء" ,
-  "ExamAndExercises" :  "اختبارات وامتحانات"
-,
+  "ExamAndExercises" :  "اختبارات وامتحانات",
   "MyTools" : "ادواتي",
-  "profile" : "الملف الشخصي"
+  "profile" : "الملف الشخصي",
+  "falsePassword" : "ادخل كلمة المرور الصحيحه"
 }

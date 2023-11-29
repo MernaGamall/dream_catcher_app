@@ -32,7 +32,11 @@
  "ExamAndExercises" :  "Exam And Exercises",
  "MyTools" : "My Tools",
  "profile" : "profile",
- "falsePassword" : "Enter Correct Password"
+ "falsePassword" : "Enter Correct Password",
+ "timeFor" : "Its Time For... " ,
+ "Exams" : "Exams" ,
+ "Exercises" : "Exercises"
+
 
 
 }

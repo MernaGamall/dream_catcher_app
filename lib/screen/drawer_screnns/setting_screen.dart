@@ -1,4 +1,5 @@
 import 'package:dream_catcher_app/main.dart';
+import 'package:dream_catcher_app/screen/navigation_page.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -37,12 +38,14 @@ class _SettingScreenState extends State<SettingScreen> {
                         ),
                     clipBehavior: Clip.hardEdge,
                     onPressed: () {
-                        // Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ChangeColor()));
-                      if (context.locale == Locale('ar')) {
-                        context.setLocale(Locale('en'));
-                      } else {
-                        context.setLocale(Locale('ar'));
-                      }
+                     //    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => NavigationPage()));
+                      setState(() {
+                        if (context.locale == Locale('ar')) {
+                          context.setLocale(Locale('en'));
+                        } else {
+                          context.setLocale(Locale('ar'));
+                        }
+                      });
                     },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -58,14 +61,6 @@ class _SettingScreenState extends State<SettingScreen> {
                       ],
                     )),
               ),
-              // Container(
-              //     width: MediaQuery.of(context).size.width,
-              //     child: ElevatedButton(
-              //       onPressed: () =>
-              //           MyApp.of(context).changeTheme(ThemeMode.light),
-              //       child: Icon(Icons.add_a_photo_outlined),
-              //     )),
-
 
               Container(
                 width: MediaQuery.of(context).size.width,

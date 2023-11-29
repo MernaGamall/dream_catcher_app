@@ -17,31 +17,41 @@ class _ChooseOneScreenState extends State<ChooseOneScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      body:   SafeArea(
+    return Scaffold(
+      body: SafeArea(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SizedBox(height: 50,),
-              Text("Its Time For... ",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25,color: Colors.red),),
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 50,
+              ),
+              Text(
+                "timeFor".tr(),
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                    color: Colors.red),
+              ),
+              SizedBox(
+                height: 20,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: GestureDetector(
-                      onTap: (){
+                      onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => ChooseSubjectScreen(yourChoose: "Exams",),
+                            builder: (context) => ChooseSubjectScreen(
+                              yourChoose: "Exams".tr(),
+                            ),
                           ),
                         );
                       },
                       child: Container(
-
                           decoration: BoxDecoration(
                             color: Color(0xffFFE8C7),
                           ),
@@ -50,57 +60,54 @@ class _ChooseOneScreenState extends State<ChooseOneScreen> {
                               Container(
                                   height: 150,
                                   width: 150,
-                                  child: Icon(Icons.pending_actions_rounded,size: 80,)),
-                              Text(" Exams",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),],
-                          )
-                      ),
+                                  child: Icon(
+                                    Icons.pending_actions_rounded,
+                                    size: 80,
+                                  )),
+                              Text(
+                                "Exams".tr(),
+                                style: TextStyle(
+                                    fontSize: 20, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          )),
                     ),
                   ),
-                  studentLang == "Arabic".tr()?
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: GestureDetector(
-                      onTap: (){
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => ChooseSubjectScreen(yourChoose: "Exercises",),
+
+                       Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => ChooseSubjectScreen(
+                                    yourChoose: "Exercises".tr(),
+                                  ),
+                                ),
+                              );
+                            },
+                            child: Container(
+                                decoration: BoxDecoration(
+                                  color: Color(0xffFFE8C7),
+                                ),
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      height: 150,
+                                      width: 150,
+                                      child: Icon(
+                                        Icons.receipt_long_rounded,
+                                        size: 80,
+                                      ),
+                                    ),
+                                    Text("Exercises".tr(),
+                                        style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold)),
+                                  ],
+                                )),
                           ),
-                        );
-                      },
-                      child: Container(
-                          decoration: BoxDecoration(
-                            color: Color(0xffFFE8C7),
-                          ),
-                          child: Column(
-                            children: [
-                              Container(
-                                  height: 150,
-                                  width: 150,
-                                  child: Icon(Icons.receipt_long_rounded,size: 80,),),
-                              Text("Exercises ",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold)),],
-                          )
-                      ),
-                    ),
-                  ):
-                  GestureDetector(
-                    onTap: (){
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => VideosScreen(),
-                        ),
-                      );
-                    },
-                    child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.cyan
-                        ),
-                        child: Column(
-                          children: [
-                            Image.asset(""),
-                            Text("Science"),],
                         )
-                    ),
-                  ),
                 ],
               )
             ],

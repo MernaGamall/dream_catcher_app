@@ -31,5 +31,8 @@
   "ExamAndExercises" :  "اختبارات وامتحانات",
   "MyTools" : "ادواتي",
   "profile" : "الملف الشخصي",
-  "falsePassword" : "ادخل كلمة المرور الصحيحه"
+  "falsePassword" : "ادخل كلمة المرور الصحيحه",
+  "timeFor" : "..... جه وقت ال " ,
+  "Exams" : "امتحانات" ,
+  "Exercises" : "تدريبات"
 }

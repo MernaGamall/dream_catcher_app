@@ -1,23 +1,13 @@
 import 'package:dart_random_choice/dart_random_choice.dart';
-import 'package:dream_catcher_app/screen/authentication_screens/login_screen.dart';
-import 'package:dream_catcher_app/screen/authentication_screens/register_screen.dart';
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/exam_and_exercies_screens/choose_one.dart';
-import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/exam_and_exercies_screens/choose_subject.dart';
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/home_screen.dart';
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/video_screens/subjectQuestion_screen.dart';
-import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/video_screens/videos_screens.dart';
 import 'package:dream_catcher_app/screen/drawer_screnns/about_screen.dart';
 import 'package:dream_catcher_app/screen/bottom_navigantionbar_screens/profile/profile_screen.dart';
-import 'package:dream_catcher_app/screen/drawer_screnns/mindset_apps/note_app/note_first_screen.dart';
-import 'package:dream_catcher_app/screen/drawer_screnns/mindset_apps/reminder/reminder_Screen.dart';
-import 'package:dream_catcher_app/screen/drawer_screnns/mindset_apps/reminder/reminder_first_screen.dart';
 import 'package:dream_catcher_app/screen/drawer_screnns/my_tools.dart';
 import 'package:dream_catcher_app/screen/drawer_screnns/setting_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/adapters.dart';
-import 'drawer_screnns/mindset_apps/stop_watch/stop_watch_screen.dart';
-import 'drawer_screnns/mindset_apps/toss/toss_home_screen.dart';
 
 class NavigationPage extends StatefulWidget {
   NavigationPage({super.key});
@@ -29,7 +19,7 @@ class NavigationPage extends StatefulWidget {
 class _NavigationPageState extends State<NavigationPage> {
   int index = 2;
   String? AppBarTitle = "Dream Catcher";
-  String? Badge = "Badges" ;
+  String? Badge = "Badges";
   int? Score = 0;
 
   List Pages = [
@@ -73,22 +63,18 @@ class _NavigationPageState extends State<NavigationPage> {
       appBar: AppBar(
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(AppBarTitle!),
-            Icon(Icons.mode_night_outlined)
-          ],
+          children: [Text(AppBarTitle!), Icon(Icons.mode_night_outlined)],
         ),
       ),
-      endDrawer:  Drawer(
+      endDrawer: Drawer(
         child: ListView(
           children: [
             DrawerHeader(
-              //decoration: BoxDecoration(color: Colors.black),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "Dream Catcher",
+                    "AppName".tr(),
                   ),
                 ],
               ),
@@ -140,8 +126,7 @@ class _NavigationPageState extends State<NavigationPage> {
               ),
             ),
             TextButton(
-              onPressed: ()  {
-
+              onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) => MyToolsScreen(),
@@ -156,7 +141,7 @@ class _NavigationPageState extends State<NavigationPage> {
                     width: 10,
                   ),
                   Text(
-                    "My Tools",
+                    "MyTools".tr(),
                     style: TextStyle(
                       color: Colors.black,
                     ),
@@ -164,7 +149,6 @@ class _NavigationPageState extends State<NavigationPage> {
                 ],
               ),
             ),
-
             TextButton(
               onPressed: () {
                 // // await _auth.signOut();
@@ -195,88 +179,109 @@ class _NavigationPageState extends State<NavigationPage> {
       ),
       bottomNavigationBar: BottomAppBar(
         height: 60,
-          notchMargin: 5,
-          color: Colors.white,
-          clipBehavior: Clip.antiAlias,
-          shape: AutomaticNotchedShape(
-              RoundedRectangleBorder(
-                  borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(50),
-                topRight: Radius.circular(50),
-                bottomLeft: Radius.circular(50),
-                bottomRight: Radius.circular(50),
-              )),
-              RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(40)))),
-          child: Row(
-            children: [
-              SizedBox(
-                width: 20,
-              ),
-              IconButton(
-                icon: index == 0
-                    ? Container(
-                     width: 600,
-                     height: 400,
-                    child: Image.asset("assets/images/exam icon color.png" , height: 800, width: 800,))
-                    :  Image.asset("assets/images/exam icon b&w.png", height: 200, width: 200,),
-                onPressed: () {
-                  setState(() {
-                    index = 0;
-                    AppBarTitle = "Exam and Exercises";
-                  });
-                },
-              ),
-              SizedBox(
-                width: 20,
-              ),
-              IconButton(
-                tooltip: 'Favorite',
-                icon: index == 1
-                    ?Image.asset("assets/images/profile color.png",width: 50,height: 50,)
-                    : Image.asset("assets/images/profile b&w.png",width: 100,height: 100,),
-                onPressed: () {
-                  setState(() {
-                    index = 1;
-                    AppBarTitle = "profile";
-                  });
-                },
-              ),
-              Expanded(child: SizedBox()),
-              IconButton(
-                tooltip: 'Favorite',
-                icon: index == 2 ? Icon(Icons.home) : Icon(Icons.note_sharp),
-                onPressed: () {
-                  setState(() {
-                    index = 2;
-                    AppBarTitle = "DreamCatcher";
-                  });
-                },
-              ),
-              SizedBox(
-                width: 20,
-              ),
-              IconButton(
-                tooltip: 'Favorite',
-                icon: index == 3
-                    ? Icon(Icons.ondemand_video_outlined)
-                    : Icon(Icons.note_sharp),
-                onPressed: () {
-                  setState(() {
-                    index = 3;
-                    AppBarTitle = "ChooseSubjectTitle".tr();
-                  });
-                },
-              ),
-              SizedBox(
-                width: 20,
-              ),
-            ],
+        notchMargin: 5,
+        color: Colors.white,
+        clipBehavior: Clip.antiAlias,
+        shape: AutomaticNotchedShape(
+          RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(50),
+            topRight: Radius.circular(50),
+            bottomLeft: Radius.circular(50),
+            bottomRight: Radius.circular(50),
           )),
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(40),
+            ),
+          ),
+        ),
+        child: Row(
+          children: [
+            SizedBox(
+              width: 20,
+            ),
+            IconButton(
+              icon: index == 0
+                  ? Container(
+                      width: 600,
+                      height: 400,
+                      child: Image.asset(
+                        "assets/images/exam icon color.png",
+                        height: 800,
+                        width: 800,
+                      ),
+                    )
+                  : Image.asset(
+                      "assets/images/exam icon b&w.png",
+                      height: 200,
+                      width: 200,
+                    ),
+              onPressed: () {
+                setState(() {
+                  index = 0;
+                  AppBarTitle = "ExamAndExercises".tr();
+                });
+              },
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            IconButton(
+              icon: index == 1
+                  ? Image.asset(
+                      "assets/images/profile color.png",
+                      width: 50,
+                      height: 50,
+                    )
+                  : Image.asset(
+                      "assets/images/profile b&w.png",
+                      width: 100,
+                      height: 100,
+                    ),
+              onPressed: () {
+                setState(() {
+                  index = 1;
+                  AppBarTitle = "profile".tr();
+                });
+              },
+            ),
+            Expanded(child: SizedBox()),
+            IconButton(
+              icon: index == 2 ? Icon(Icons.home) : Icon(Icons.note_sharp),
+              onPressed: () {
+                setState(() {
+                  index = 2;
+                  AppBarTitle = "AppName".tr();
+                });
+              },
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            IconButton(
+              icon: index == 3
+                  ? Icon(Icons.ondemand_video_outlined)
+                  : Icon(Icons.note_sharp),
+              onPressed: () {
+                setState(() {
+                  index = 3;
+                  AppBarTitle = "ChooseSubjectTitle".tr();
+                });
+              },
+            ),
+            SizedBox(
+              width: 20,
+            ),
+          ],
+        ),
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(40)),
+          borderRadius: BorderRadius.all(
+            Radius.circular(40),
+          ),
         ),
         onPressed: () {
           showDialog<void>(
@@ -296,34 +301,3 @@ class _NavigationPageState extends State<NavigationPage> {
     );
   }
 }
-
-
-// int calcNo (requird int x ,requird int y ,requird int z) {
-
-// return x + y / z
-// }
-
-
-// calcNo (x : 2 , z : 5 , y : 3);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

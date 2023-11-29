@@ -28,7 +28,9 @@
  "playList" : "Play Lists :",
  "logOut" : "Log Out" ,
  "edit" : "Edit" ,
- "cancel" : "Cancel"
-
+ "cancel" : "Cancel",
+ "ExamAndExercises" :  "Exam And Exercises",
+ "MyTools" : "My Tools",
+ "profile" : "profile"
 }
 

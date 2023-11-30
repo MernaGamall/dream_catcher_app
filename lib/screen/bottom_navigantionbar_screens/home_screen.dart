@@ -17,11 +17,16 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(" Hello our champ",style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black87),),
-              SizedBox(height: 10,),
+              Text(
+                " Hello our champ",
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black87),
+              ),
+              SizedBox(
+                height: 10,
+              ),
               Text(
                 " Your Badge :     ",
                 style: TextStyle(
@@ -70,17 +75,25 @@ class _HomeScreenState extends State<HomeScreen> {
                                       fontWeight: FontWeight.bold,
                                       color: Colors.orange[900]),
                                 ),
-                                SizedBox(height: 10,),
+                                SizedBox(
+                                  height: 10,
+                                ),
                                 Text(
                                   " A New Video Uploaded    ",
                                   style: TextStyle(
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold,
-                                      color: Color(0xffF5E8C7)),
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xffF5E8C7),
+                                  ),
                                 ),
-                                SizedBox(height: 20,),
-                                Icon(Icons.slow_motion_video,size: 40,color: Colors.red,)
-
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Icon(
+                                  Icons.slow_motion_video,
+                                  size: 40,
+                                  color: Colors.red,
+                                )
                               ],
                             ),
                           ),

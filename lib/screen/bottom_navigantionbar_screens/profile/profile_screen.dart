@@ -12,10 +12,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.white,
-      // appBar: AppBar(
-      //   title: Text("profile"),
-      // ),
       body: SafeArea(
         child: Padding(
           padding:  EdgeInsets.all(8.0),

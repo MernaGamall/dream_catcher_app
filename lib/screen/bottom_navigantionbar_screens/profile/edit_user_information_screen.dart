@@ -260,32 +260,6 @@ class _EditScreenState extends State<EditScreen> {
                               );
                             }).toList(),
                           )
-                        // DropdownButton<String>(
-                        //
-                        //  // focusNode: FocusNode(),
-                        //  // enableFeedback: true,
-                        // //  autofocus: true,
-                        //   hint: Text("stage".tr()),
-                        //   underline: Container(),
-                        //   borderRadius: BorderRadius.all(Radius.circular(15)),
-                        //   value: studentStage,
-                        //   onChanged: (String? newValue) {
-                        //     setState(() {
-                        //       studentStage = newValue!;
-                        //     });
-                        //   },
-                        //   isExpanded: true,
-                        //   items: stages.map((String value) {
-                        //     return DropdownMenuItem<String>(
-                        //       value: value,
-                        //       child: Center(
-                        //         child: Text(
-                        //           value,
-                        //         ),
-                        //       ),
-                        //     );
-                        //   }).toList(),
-                        // ),
                       ),
                     ),
 

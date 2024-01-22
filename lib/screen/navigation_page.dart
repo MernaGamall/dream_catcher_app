@@ -207,7 +207,7 @@ class _NavigationPageState extends State<NavigationPage> {
                       width: 600,
                       height: 400,
                       child: Image.asset(
-                        "assets/images/exam icon color.png",
+                        "assets/images/icons8-test-100.png",
                         height: 800,
                         width: 800,
                       ),
